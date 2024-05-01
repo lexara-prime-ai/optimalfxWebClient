@@ -181,6 +181,7 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    box-shadow: 0 .6rem .6rem 0 rgba(0, 0, 0, .03);
 }
 
 .about-us-text .text-content {
@@ -357,6 +358,7 @@
     width: 55px;
     text-align: center;
     border-radius: 3px;
+    box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .02);
     opacity: .8;
 }
 
@@ -596,8 +598,91 @@
     color: var(--blue);
 }
 
+/* Events section styling */
+.events {
+    padding: 4rem;
+}
 
+.events .event-section-title {
+    font-size: 3rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    -webkit-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    cursor: -webkit-grab;
+    cursor: grab;
+    color: var(--white);
+    background: var(--blue);
+    padding: 1rem;
+    border-radius: 9px;
+    box-shadow: var(--shadow-level-1);
+    width: 15%;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: .7;
+}
 
+.event-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4rem;
+}
+
+.event-poster {
+    width: 100%;
+    border-radius: 12px;
+    opacity: .7;
+    transition: .2s all ease;
+}
+
+.event-poster:hover {
+    opacity: 1;
+}
+
+.event-title {
+    font-size: 3rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    -webkit-transition: .2s all ease;
+    -o-transition: .2s all ease;
+    transition: .2s all ease;
+    cursor: -webkit-grab;
+    cursor: grab;
+    color: var(--grey);
+    background: var(--blue);
+    padding: 1rem;
+    border-radius: 9px;
+    width: 40%;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    opacity: .7;
+}
+
+.event-description {
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: #666;
+}
+
+.event-pricing {
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    background: var(--chartreuse);
+    box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .03);
+    color: var(--white);
+    width: 16%;
+    text-align: center;
+    border-radius: 4px;
+}
 
 /* Contact section styling */
 .contact {
