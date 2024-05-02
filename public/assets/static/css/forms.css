@@ -178,7 +178,7 @@ header .registration-form .btn.login {
     background: var(--grey);
 }
 
-header .registration-form .btn.login a {
+header .registration-form .btn.register a, .btn.login a {
     text-decoration: none;
     color: var(--white);
 }

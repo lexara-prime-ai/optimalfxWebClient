@@ -82,3 +82,20 @@ const slider = function () {
   });
 };
 slider();
+
+
+// Check whether user has an [ACTIVE] session
+window.addEventListener("load", () => {
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    console.log("User [AUTHORIZED]...");
+  } else {
+    // [DEBUG] logs
+    console.log("User not [AUTHORIZED]\n[REDIRECTING]...");
+
+    // Redirect user to login page
+    window.location.href =
+      "http://127.0.0.1:5500/web_client/public/assets/pages/register.html?";
+  }
+});
