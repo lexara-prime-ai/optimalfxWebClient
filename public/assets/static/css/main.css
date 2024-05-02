@@ -876,6 +876,19 @@ textarea:focus {
     font-size: .9rem;
 }
 
+/* Copy Trading URL section styling */
+.box .copy-trading-url {
+    color: rgb(163, 163, 163);
+    background: #a7a7a723;
+    text-transform: lowercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    padding: .3rem;
+    border-radius: 3px;
+}
+
 .credit {
     text-transform: uppercase;
     font-family: "Roboto Mono", monospace;
