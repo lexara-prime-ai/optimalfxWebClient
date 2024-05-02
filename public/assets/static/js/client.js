@@ -1,3 +1,15 @@
+// Debugging
+const LOG = console.log;
+
+// Selectors
+const usernameInput = document.querySelector('#username');
+const emailInput = document.querySelector('#username');
+const passwordInput = document.querySelector('#username');
+const registerationButton = document.querySelector('#registeration-form-btn');
+const loginButton = document.querySelector('#login-form-btn');
+
+
+
 
 const ENDPOINTS = Object.freeze({
     // Authenticatio
@@ -22,4 +34,17 @@ class Client {
     static registerUser() {
         console.log(ENDPOINTS.REGISTRATION);
     }
+
+    static getUsers() {
+
+    }
+
+    static async fetchData() {
+        const RESPONSE = await fetch(ENDPOINTS.GET_USERS.trim());
+        const USERS = await RESPONSE.json();
+        LOG(USERS);
+    }
 }
+
+
+Client.fetchData();
