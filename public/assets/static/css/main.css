@@ -8,13 +8,6 @@
 @import url("./variables.css");
 @import url("./responsive.css");
 
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .logo {
     width: 90%;
     background: rgba(253, 253, 253, 0.05);
@@ -95,22 +88,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-}
-
-
-#overlay {
-    position: fixed;
-    /* Sit on top of the page content */
-    width: 100%;
-    /* Full width (cover the whole page) */
-    height: 100%;
-    /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .05);
-    z-index: 2;
 }
 
 .hero .hero-content-wrapper {
