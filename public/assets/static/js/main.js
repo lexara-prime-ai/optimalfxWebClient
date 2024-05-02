@@ -96,6 +96,6 @@ window.addEventListener("load", () => {
 
     // Redirect user to login page
     window.location.href =
-      "http://127.0.0.1:5500/web_client/public/assets/pages/register.html?";
+      "http://localhost:5500/web_client/public/assets/pages/register.html?";
   }
 });

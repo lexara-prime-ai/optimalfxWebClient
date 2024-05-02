@@ -26,49 +26,62 @@ const ENDPOINTS = Object.freeze({
   GET_COURSES: "http://localhost:5000/api/Course",
 });
 
+// CUSTOM [ERROR] HANDLER
+// [ERROR] handling
+class ErrorHandling {
+  static propagateError(message, process) {
+    LOG(
+      `
+            [AN ERROR OCCURRED]
+            [PROCESS] -> ${process}
+            [MESSAGE] -> ${message}
+            `
+    );
+  }
+}
+///////// END ////////
+
 class Client {
   // Register a user
   static async registerUser() {
-    const FORM_STATE = Utils.validateFormInput();
-    
-    if (FORM_STATE) {
-        LOG(FORM_STATE);
-    } else {
-        LOG(FORM_STATE);
+    try {
+      const PAYLOAD = {
+        username: usernameInput.value,
+        email: emailInput.value,
+        password: emailInput.value,
+      };
+
+      LOG(PAYLOAD);
+
+      // PAYLOAD <OPTIONS>
+      const OPTIONS = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(PAYLOAD),
+      };
+
+      const RESPONSE = await fetch(ENDPOINTS.REGISTRATION, OPTIONS);
+      const USER_RESPONSE = await RESPONSE.json();
+
+      // event.preventDefault();
+
+      // [DEBUG] logs
+      LOG(USER_RESPONSE);
+    } catch (error) {
+      ErrorHandling.propagateError(error, "registerUser");
     }
-
-    const PAYLOAD = {
-      username: usernameInput.value,
-      email: emailInput.value,
-      password: emailInput.value,
-    };
-
-    // LOG(PAYLOAD);
-
-    // // PAYLOAD <OPTIONS>
-    // const OPTIONS = {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(PAYLOAD),
-    // };
-
-    // const RESPONSE = await fetch(ENDPOINTS.REGISTRATION, OPTIONS);
-    // const USER_RESPONSE = await RESPONSE.json();
-
-    // // [DEBUG] logs
-    // LOG(USER_RESPONSE);
-
-    event.preventDefault();
   }
 
-  static getUsers() {}
-
-  static async fetchData() {
-    const RESPONSE = await fetch(ENDPOINTS.GET_USERS.trim());
-    const USERS = await RESPONSE.json();
-    LOG(USERS);
+  static async getUsers() {
+    try {
+      const RESPONSE = await fetch(ENDPOINTS.GET_USERS.trim());
+      const USERS = await RESPONSE.json();
+      LOG(USERS);
+    } catch (error) {
+      ErrorHandling.propagateError(error, "getUsers");
+    }
   }
 }
 
@@ -86,15 +99,18 @@ class Utils {
   // Validate form
   static validateFormInput() {
     if (
-      usernameInput.value.trim().length > 0 &&
-      emailInput.value.trim().length > 0 &&
-      passwordInput.value.trim().length > 0
+      usernameInput.value.length < 6 &&
+      emailInput.value.length < 6 &&
+      passwordInput.value.length < 6
     ) {
-      console.log("TRUE");
-      return true;
-    } else {
-      console.log("FALSE");
+      event.preventDefault();
+      LOG("Form [VALIDATION] failed");
       return false;
+    } else {
+      //   window.location.href = 'http://localhost:5500/web_client/public/assets/pages/login.html';
+
+      LOG("Form [VALIDATION] successful");
+      return true;
     }
   }
 }
