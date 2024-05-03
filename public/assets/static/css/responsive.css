@@ -26,6 +26,10 @@
     .course-levels .course-level a {
         font-size: 1.2rem;
     }
+    
+    .events .event-section-title {
+        width: 100%;
+    }
 }
 
 @media (max-width:730px) {
@@ -79,6 +83,18 @@
     }
 }
 
+@media (max-width:376px) {
+    .dots {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+    }
+
+    .slider {
+        height: 60rem;
+    }
+}
+
 
 @media (max-width: 320px) {
     html {
@@ -93,6 +109,10 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .slider {
+        height: 50rem;
     }
 
     .slider__btn {
