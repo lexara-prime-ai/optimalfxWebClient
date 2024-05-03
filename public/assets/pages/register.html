@@ -30,45 +30,46 @@
             </p>
         </section>
 
-        <form class="registration-form" id="registration-form" name="registrationForm">
-            <!-- Main form input fields -->
-            <div class="main-input-fields">
-                <h2 class="registration-form-title">
-                    Register
-                    <i class="fa-solid fa-user" class="user-profile-icon"></i>
-                </h2>
+        <!-- Form container -->
+        <div class="form-container">
+            <form class="registration-form" id="registration-form" name="registrationForm">
+                <!-- Main form input fields -->
+                <div class="main-input-fields">
+                    <h2 class="registration-form-title">
+                        Register
+                        <i class="fa-solid fa-user" class="user-profile-icon"></i>
+                    </h2>
 
-                <div class="input-box">
-                    <input name="username" type="text" min="6" id="username" placeholder="Username..." required>
+                    <div class="input-box">
+                        <input name="username" type="text" min="6" id="username" placeholder="Username..." required>
+                    </div>
+
+                    <div class="input-box">
+                        <input name="email" type="email" id="email" placeholder="Email..." required>
+                    </div>
+
+                    <!-- ENABLE AI TIPS -->
+                    <div class="input-box">
+                        <input name="password" type="password" min="6" id="password" placeholder="Password..." required>
+                    </div>
+
+                    <div class="remember">
+                        <input type="checkbox" name="" id="remember-login">
+                        <label for="saved-login">Remember Me</label>
+                    </div>
                 </div>
+            </form>
 
-                <div class="input-box">
-                    <input name="email" type="email" id="email" placeholder="Email..." required>
-                </div>
-
-                <!-- ENABLE AI TIPS -->
-                <div class="input-box">
-                    <input name="password" type="password" min="6" id="password" placeholder="Password..." required>
-                </div>
-
-                <div class="remember">
-                    <input type="checkbox" name="" id="remember-login">
-                    <label for="saved-login">Remember Me</label>
-                </div>
-            </div>
-
-
+            <!-- Button container -->
             <div class="button-container">
                 <button type="submit" class="btn register" id="registration-form-btn" onclick="Client.registerUser()">
                     Register
                 </button>
-
-                <button type="submit" class="btn login" id="login-form-btn">
+                <button class="btn login" id="login-form-btn">
                     <a href="./login.html">Log in</a>
                 </button>
             </div>
-
-        </form>
+        </div>
     </header>
 
 

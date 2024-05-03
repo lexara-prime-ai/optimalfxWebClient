@@ -3,8 +3,8 @@ const LOG = console.log;
 
 // Selectors
 const usernameInput = document.querySelector("#username");
-const emailInput = document.querySelector("#username");
-const passwordInput = document.querySelector("#username");
+const emailInput = document.querySelector("#email");
+const passwordInput = document.querySelector("#password");
 const registrationButton = document.querySelector("#registration-form-btn");
 const loginButton = document.querySelector("#login-form-btn");
 
@@ -26,6 +26,9 @@ const ENDPOINTS = Object.freeze({
   GET_COURSES: "http://localhost:5000/api/Course",
 });
 
+// [REDIRECT]
+//   window.location.href = 'http://localhost:5500/web_client/public/assets/pages/login.html';
+
 // CUSTOM [ERROR] HANDLER
 // [ERROR] handling
 class ErrorHandling {
@@ -45,30 +48,42 @@ class Client {
   // Register a user
   static async registerUser() {
     try {
-      const PAYLOAD = {
-        username: usernameInput.value,
-        email: emailInput.value,
-        password: emailInput.value,
-      };
+      if (
+        usernameInput.value.length == 0 &&
+        emailInput.value.length == 0 &&
+        passwordInput.value.length == 0
+      ) {
+        event.preventDefault();
+        LOG("Form [VALIDATION] failed");
+      } else {
+        const PAYLOAD = {
+          username: usernameInput.value || null,
+          email: emailInput.value || null,
+          password: passwordInput.value || null,
+        };
 
-      LOG(PAYLOAD);
+        // [DEBUG] logs
+        LOG({ username: PAYLOAD.username, email: PAYLOAD.email });
 
-      // PAYLOAD <OPTIONS>
-      const OPTIONS = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(PAYLOAD),
-      };
+        // PAYLOAD <OPTIONS>
+        const OPTIONS = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(PAYLOAD),
+        };
 
-      const RESPONSE = await fetch(ENDPOINTS.REGISTRATION, OPTIONS);
-      const USER_RESPONSE = await RESPONSE.json();
+        const RESPONSE = await fetch(ENDPOINTS.REGISTRATION, OPTIONS);
+        const USER_RESPONSE = await RESPONSE.json();
 
-      // event.preventDefault();
+        // [DEBUG] logs
+        LOG(USER_RESPONSE);
 
-      // [DEBUG] logs
-      LOG(USER_RESPONSE);
+        // Redirect user to [LOGIN] page.
+        window.location.href =
+          "http://localhost:5500/web_client/public/assets/pages/login.html";
+      }
     } catch (error) {
       ErrorHandling.propagateError(error, "registerUser");
     }
@@ -94,23 +109,5 @@ class Utils {
     usernameInput.value = "";
     emailInput.value = "";
     passwordInput.value = "";
-  }
-
-  // Validate form
-  static validateFormInput() {
-    if (
-      usernameInput.value.length < 6 &&
-      emailInput.value.length < 6 &&
-      passwordInput.value.length < 6
-    ) {
-      event.preventDefault();
-      LOG("Form [VALIDATION] failed");
-      return false;
-    } else {
-      //   window.location.href = 'http://localhost:5500/web_client/public/assets/pages/login.html';
-
-      LOG("Form [VALIDATION] successful");
-      return true;
-    }
   }
 }

@@ -47,7 +47,7 @@ header .welcome-sub-title {
     text-transform: uppercase;
 }
 
-header .registration-form {
+header .form-container {
     background: rgb(255, 255, 255);
     background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 90%, rgba(255, 255, 255, 1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, 0.8) 90%, rgba(255, 255, 255, 1) 100%);
@@ -66,7 +66,7 @@ header .registration-form {
     flex: 1;
 }
 
-header .registration-form .registration-form-title {
+.form-container .registration-form .registration-form-title {
     margin-bottom: 1rem;
     font-size: 2rem;
     font-family: "Inter", sans-serif;
@@ -84,20 +84,20 @@ header .registration-form .registration-form-title {
     border-radius: 6px;
 }
 
-header .registration-form.active {
+.form-container .registration-form.active {
     transform: scale(1);
 }
 
-header .registration-form .input-box {
+.form-container .registration-form .input-box {
     margin-bottom: 1rem;
 }
 
-header .registration-form .input-box span {
+.form-container .registration-form .input-box span {
     font-size: 1rem;
     color: var(--grey);
 }
 
-header .registration-form .input-box input {
+.form-container .registration-form .input-box input {
     font-size: 1rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -118,12 +118,12 @@ header .registration-form .input-box input {
     transition: .2s all ease;
 }
 
-header .registration-form .input-box input:focus {
+.form-container .registration-form .input-box input:focus {
     outline: none;
     border-right: 9px solid var(--blue);
 }
 
-header .registration-form .remember {
+.form-container .registration-form .remember {
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -132,7 +132,7 @@ header .registration-form .remember {
     width: 40%;
 }
 
-header .registration-form .remember label {
+.form-container .registration-form .remember label {
     color: var(--grey);
     font-size: .7rem;
     font-size: .8rem;
@@ -146,7 +146,7 @@ header .registration-form .remember label {
     cursor: pointer;
 }
 
-header .registration-form .btn {
+.form-container .btn {
     width: 100%;
     border: none;
     border-radius: 6px;
@@ -169,16 +169,17 @@ header .registration-form .btn {
 }
 
 
-header .registration-form .btn:hover {
+.form-container .btn:hover {
     transform: translateY(-1px);
     opacity: 1;
 }
 
-header .registration-form .btn.login {
+.form-container .btn.login {
     background: var(--grey);
 }
 
-header .registration-form .btn.register a, .btn.login a {
+.form-container .btn.register a,
+.btn.login a {
     text-decoration: none;
     color: var(--white);
 }
