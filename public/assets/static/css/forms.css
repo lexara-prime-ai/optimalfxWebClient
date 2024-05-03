@@ -156,7 +156,8 @@ header .form-container {
 }
 
 .form-container .btn.register a,
-.btn.login a, .btn.proceed a {
+.btn.login a,
+.btn.proceed a {
     text-decoration: none;
     color: var(--white);
 }
@@ -171,16 +172,16 @@ header .form-container {
 }
 
 @media (max-width: 1024px) {
-  header {
-    display: flex;
-    flex-direction: column;
-  }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
 
-  header .welcome-title-content {
-    margin: 5rem 1rem;
-    padding: 2rem;
-    width: 100%;
-  }
+    header .welcome-title-content {
+        margin: 5rem 1rem;
+        padding: 2rem;
+        width: 100%;
+    }
 }
 
 @media (max-width:376px) {
@@ -193,4 +194,3 @@ header .form-container {
         font-size: 2.4rem;
     }
 }
-
