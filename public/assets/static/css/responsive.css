@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (max-width: 1366px) {
     html {
         font-size: 80%;
@@ -20,13 +27,13 @@
     }
 
     .course-levels {
-      padding: 1rem 1rem;
+        padding: 1rem 1rem;
     }
 
     .course-levels .course-level a {
         font-size: 1.2rem;
     }
-    
+
     .events .event-section-title {
         width: 100%;
     }
@@ -53,7 +60,12 @@
     }
 
     .about-us-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -66,17 +78,59 @@
     }
 
     .video-content-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         gap: 2rem;
         width: 100%;
         padding: 2rem 3rem;
     }
 
-    .footer-content-wrapper {
+    .events {
+        padding: 1rem;
+    }
+
+    .event-content-wrapper {
+        padding: 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact {
+        padding: 1rem;
+    }
+
+    .contact form {
+        padding: 2rem;
+    }
+
+    .contact form .contact-btn {
+        width: 100%;
+    }
+
+    .footer-content-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: start;
         gap: 2rem;
         padding: 2rem;
@@ -104,9 +158,14 @@
     .course-levels {
         display: none;
     }
-    
+
     .video-content-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 2rem;
     }
