@@ -11,20 +11,20 @@ const proceedButton = document.querySelector("#proceed-form-btn");
 
 const ENDPOINTS = Object.freeze({
   // Authenticatio
-  REGISTRATION: "http://localhost:5000/api/Auth/register",
-  LOGIN: "http://localhost:5000/api/Auth/login",
+  REGISTRATION: "https://optimalfx-latest.onrender.com/api/Auth/register",
+  LOGIN: "https://optimalfx-latest.onrender.com/api/Auth/login",
   // Users
-  ADD_USER: "http://localhost:5000/api/User",
-  UPDATE_USER: "http://localhost:5000/api/User",
-  DELETE_USER: "http://localhost:5000/api/User",
-  GET_USER: "http://localhost:5000/api/User",
-  GET_USERS: "http://localhost:5000/api/User",
+  ADD_USER: "https://optimalfx-latest.onrender.com/api/User",
+  UPDATE_USER: "https://optimalfx-latest.onrender.com/api/User",
+  DELETE_USER: "https://optimalfx-latest.onrender.com/api/User",
+  GET_USER: "https://optimalfx-latest.onrender.com/api/User",
+  GET_USERS: "https://optimalfx-latest.onrender.com/api/User",
   // Courses
-  ADD_COURSE: "http://localhost:5000/api/Course",
-  UPDATE_COURSE: "http://localhost:5000/api/Course",
-  DELETE_COURSE: "http://localhost:5000/api/Course",
-  GET_COURSE: "http://localhost:5000/api/Course",
-  GET_COURSES: "http://localhost:5000/api/Course",
+  ADD_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
+  UPDATE_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
+  DELETE_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
+  GET_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
+  GET_COURSES: "https://optimalfx-latest.onrender.com/api/Course",
 });
 
 // [REDIRECT]
