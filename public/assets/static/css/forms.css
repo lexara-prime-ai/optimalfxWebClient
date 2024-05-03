@@ -169,3 +169,28 @@ header .form-container {
 .form-container .btn.btn.proceed.visible {
     display: block;
 }
+
+@media (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .welcome-title-content {
+    margin: 5rem 1rem;
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width:376px) {
+    header .welcome-title {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    header .welcome-title strong {
+        font-size: 2.4rem;
+    }
+}
+
