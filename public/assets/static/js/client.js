@@ -89,6 +89,48 @@ class Client {
     }
   }
 
+
+  // User login
+  static async userLogin() {
+    try {
+      if (
+        usernameInput.value.length == 0 &&
+        // emailInput.value.length == 0 &&
+        passwordInput.value.length == 0
+      ) {
+        event.preventDefault();
+        LOG("Form [VALIDATION] failed");
+      } else {
+        const PAYLOAD = {
+          username: usernameInput.value || null,
+        //   email: emailInput.value || null,
+          password: passwordInput.value || null,
+        };
+
+        // [DEBUG] logs
+        LOG({ username: PAYLOAD.username});
+
+        // PAYLOAD <OPTIONS>
+        const OPTIONS = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(PAYLOAD),
+        };
+
+        const RESPONSE = await fetch(ENDPOINTS.LOGIN, OPTIONS);
+
+        // [DEBUG] logs
+        LOG(RESPONSE);
+
+        
+      }
+    } catch (error) {
+      ErrorHandling.propagateError(error, "userLogin");
+    }
+  }
+
   static async getUsers() {
     try {
       const RESPONSE = await fetch(ENDPOINTS.GET_USERS.trim());
