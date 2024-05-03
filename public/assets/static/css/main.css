@@ -79,6 +79,11 @@
     transition: .2s all ease;
 }
 
+.cta-hero a {
+    color: var(--white);
+    text-decoration: none;
+}
+
 .cta-hero:hover {
     opacity: .7;
 }
@@ -890,3 +895,4 @@ textarea:focus {
         font-size: 55%;
     }
 }
+
