@@ -7,6 +7,7 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const registrationButton = document.querySelector("#registration-form-btn");
 const loginButton = document.querySelector("#login-form-btn");
+const proceedButton = document.querySelector("#proceed-form-btn");
 
 const ENDPOINTS = Object.freeze({
   // Authenticatio
@@ -45,7 +46,9 @@ class ErrorHandling {
 ///////// END ////////
 
 class Client {
-  // Register a user
+  ////////////////////////////////
+  ////// [USER] REGISTRATION /////
+  ///////////////////////////////
   static async registerUser() {
     try {
       if (
@@ -89,26 +92,22 @@ class Client {
     }
   }
 
-
-  // User login
+  //////////////////////////
+  ////// [USER] LOGIN /////
+  ///////////////////////
   static async userLogin() {
     try {
-      if (
-        usernameInput.value.length == 0 &&
-        // emailInput.value.length == 0 &&
-        passwordInput.value.length == 0
-      ) {
+      if (usernameInput.value.length == 0 && passwordInput.value.length == 0) {
         event.preventDefault();
         LOG("Form [VALIDATION] failed");
       } else {
         const PAYLOAD = {
           username: usernameInput.value || null,
-        //   email: emailInput.value || null,
           password: passwordInput.value || null,
         };
 
         // [DEBUG] logs
-        LOG({ username: PAYLOAD.username});
+        LOG(`Loging in: { username: ${PAYLOAD.username} }`);
 
         // PAYLOAD <OPTIONS>
         const OPTIONS = {
@@ -121,16 +120,31 @@ class Client {
 
         const RESPONSE = await fetch(ENDPOINTS.LOGIN, OPTIONS);
 
-        // [DEBUG] logs
-        LOG(RESPONSE);
+        // Check [RESPONSE] status
+        if (RESPONSE.status == 400) {
+          LOG("Please provide [VALID] credentials...");
+        } else {
+          const SESSION_TOKEN = await RESPONSE.json();
 
-        
+          // Add [TOKEN] to localstorage
+          localStorage.setItem("SESSION_TOKEN", SESSION_TOKEN.TOKEN);
+
+          // Enable [PROCEED] button
+          if (localStorage.getItem("SESSION_TOKEN")) {
+            proceedButton.classList.add("visible");
+          } else {
+            proceedButton.classList.add("visible");
+          }
+        }
       }
     } catch (error) {
       ErrorHandling.propagateError(error, "userLogin");
     }
   }
 
+  //////////////////////////
+  ////// GET [USERS] /////
+  ///////////////////////
   static async getUsers() {
     try {
       const RESPONSE = await fetch(ENDPOINTS.GET_USERS.trim());
@@ -153,3 +167,16 @@ class Utils {
     passwordInput.value = "";
   }
 }
+
+class App {
+  static verifySessionStatus() {
+    // Enable [PROCEED] button
+    if (localStorage.getItem("SESSION_TOKEN")) {
+      proceedButton.classList.add("visible");
+    } else {
+      proceedButton.classList.remove("visible");
+    }
+  }
+}
+
+App.verifySessionStatus();

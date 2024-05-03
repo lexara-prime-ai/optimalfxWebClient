@@ -85,17 +85,17 @@ slider();
 
 
 // Check whether user has an [ACTIVE] session
-// window.addEventListener("load", () => {
-//   const token = localStorage.getItem("token");
+window.addEventListener("load", () => {
+  const token = localStorage.getItem("SESSION_TOKEN");
 
-//   if (token) {
-//     console.log("User [AUTHORIZED]...");
-//   } else {
-//     // [DEBUG] logs
-//     console.log("User not [AUTHORIZED]\n[REDIRECTING]...");
+  if (token) {
+    console.log("User [AUTHORIZED]...");
+  } else {
+    // [DEBUG] logs
+    console.log("User not [AUTHORIZED]\n[REDIRECTING]...");
 
-//     // Redirect user to login page
-//     window.location.href =
-//       "http://localhost:5500/web_client/public/assets/pages/register.html?";
-//   }
-// });
+    // Redirect user to login page
+    window.location.href =
+      "http://localhost:5500/web_client/public/assets/pages/register.html?";
+  }
+});

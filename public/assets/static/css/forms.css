@@ -123,29 +123,6 @@ header .form-container {
     border-right: 9px solid var(--blue);
 }
 
-.form-container .registration-form .remember {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .5rem 0;
-    padding: .6rem;
-    width: 40%;
-}
-
-.form-container .registration-form .remember label {
-    color: var(--grey);
-    font-size: .7rem;
-    font-size: .8rem;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "slnt" 0;
-    letter-spacing: 1.3px;
-    cursor: pointer;
-}
-
 .form-container .btn {
     width: 100%;
     border: none;
@@ -179,7 +156,16 @@ header .form-container {
 }
 
 .form-container .btn.register a,
-.btn.login a {
+.btn.login a, .btn.proceed a {
     text-decoration: none;
     color: var(--white);
+}
+
+.form-container .btn.btn.proceed {
+    background: var(--chartreuse);
+    display: none;
+}
+
+.form-container .btn.btn.proceed.visible {
+    display: block;
 }
