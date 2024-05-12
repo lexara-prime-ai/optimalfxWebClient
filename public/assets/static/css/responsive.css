@@ -18,13 +18,44 @@
 }
 
 @media (max-width:768px) {
+    .hero .hero-content-wrapper {
+        top: 35%;
+    }
+
+    .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
+        width: 75%;
+    }
+
+    .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
+        width: 75%;
+    }
+
     .about-section-title {
         margin-bottom: 2rem;
     }
 
     .about-us-content {
         padding: 5rem 1rem;
+        display: flex;
+        flex-direction: column;
     }
+
+    .mentor-image-wrapper {
+        border: none;
+    }
+    
+    .mentor-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 99px;
+        /* -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1 / span 2;
+        width: 10rem;
+        border-radius: 50%; */
+    }
+
+
 
     .course-levels {
         padding: 1rem 1rem;

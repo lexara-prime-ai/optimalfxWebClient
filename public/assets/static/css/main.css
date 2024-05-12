@@ -58,6 +58,11 @@
     font-style: normal;
     color: var(--white);
     letter-spacing: 1.4px;
+    transition: .2s all ease;
+}
+
+.navigation .nav-links .link-item .link:hover {
+    opacity: .7;
 }
 
 .cta-hero {
@@ -70,7 +75,7 @@
     letter-spacing: 1.4px;
     background: var(--blue);
     border: none;
-    border-radius: 9px;
+    border-radius: 3px;
     padding: 1rem;
     width: 120px;
     cursor: pointer;
@@ -89,7 +94,8 @@
 }
 
 .hero {
-    background: url(../../images/backgrounds/hero_bg_2.jpg);
+    background: url(../../images/backgrounds/monitor_with_logo.jpg);
+    box-shadow: inset 30em 42em 21em 90em #00000054;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -98,7 +104,7 @@
 .hero .hero-content-wrapper {
     position: relative;
     z-index: 1000;
-    top: 20%;
+    top: 26%;
     padding: 2rem 9rem;
 }
 
@@ -113,6 +119,16 @@
         "slnt" 0;
     line-height: 5.5rem;
     color: var(--blue);
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ecd7c5", endColorstr="#ff9300", GradientType=1);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: .3rem;
+    padding: 2rem;
+    border-left: 9px solid var(--blue);
 }
 
 .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
@@ -120,11 +136,20 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    color: var(--white);
+    color: #c4c4c4ee;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     width: 40%;
     margin: 2rem 0;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ecd7c5", endColorstr="#ff9300", GradientType=1);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: .3rem;
+    padding: 2rem;
 }
 
 /**************************/
@@ -132,6 +157,7 @@
 /**************************/
 .about-us {
     text-align: center;
+    box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .6);
 }
 
 .about-section-title {
@@ -157,16 +183,6 @@
     margin: auto;
 }
 
-.mentor-img {
-    width: 100%;
-    border-radius: 21px;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -webkit-box-shadow: 0 .6rem .6rem 0 rgba(0, 0, 0, .03);
-    box-shadow: 0 .6rem .6rem 0 rgba(0, 0, 0, .03);
-}
-
 .about-us-text .text-content {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
@@ -183,6 +199,19 @@
     color: var(--blue);
 }
 
+.mentor-image-wrapper {
+    border-right: 2px solid var(--blue);
+}
+
+.mentor-img {
+    border-radius: 21px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-box-shadow: 0 .6rem .6rem 0 rgba(0, 0, 0, .03);
+    box-shadow: 0 .6rem .6rem 0 rgba(0, 0, 0, .03);
+}
+
 .image-description {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -192,13 +221,15 @@
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
+    gap: .3rem;
+    padding: 1rem 5rem;
 }
 
 .image-title,
 .mentor-name {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -208,24 +239,27 @@
 
 .image-title {
     color: #414141;
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 2rem;
 }
 
 .mentor-name {
-    color: #242424;
+    color: #414141;
     font-weight: 900;
+    font-size: 1.2rem;
 }
 
 .about-us-video-wrapper {
     width: 100%;
     margin-top: 2rem;
-    border-radius: 12px;
+    border-radius: 3px;
 }
 
 
 .about-us-video-wrapper video {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 3px;
 }
 
 /* Course section styling */
@@ -263,9 +297,9 @@
     margin-top: 3rem;
     background: var(--white);
     padding: 1rem 6%;
-    border-radius: 12px;
-    -webkit-box-shadow: var(--shadow-level-2);
-    box-shadow: var(--shadow-level-2);
+    border-radius: 3px;
+    -webkit-box-shadow: var(--shadow-level-1);
+    box-shadow: 0 3rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .course-levels .course-level {
@@ -309,7 +343,7 @@
 
 .course video {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 .course-info-wrapper {
@@ -317,19 +351,19 @@
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 800;
-    font-size: .8rem;
+    font-size: .7rem;
     font-style: normal;
     letter-spacing: .5px;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.7rem;
+    line-height: 1.3rem;
 }
 
 .course-info-wrapper .course-description {
     color: #858585;
-    border-left: 3px solid var(--grey);
+    border-left: 1px solid var(--grey);
     padding-left: .5rem;
-    margin: .3rem;
+    margin: .3rem 0;
     cursor: pointer;
 }
 
@@ -338,7 +372,7 @@
     font-size: 1.1rem;
     background: var(--blue);
     color: var(--white);
-    width: 55px;
+    width: 56px;
     text-align: center;
     border-radius: 3px;
     -webkit-box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .02);
@@ -587,9 +621,10 @@
 }
 
 .events .event-section-title {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-family: "Inter", sans-serif;
     font-weight: 900;
+    letter-spacing: 1.2px;
     text-decoration: none;
     -webkit-transition: .2s all ease;
     -o-transition: .2s all ease;
@@ -599,7 +634,7 @@
     color: var(--white);
     background: var(--blue);
     padding: 1rem;
-    border-radius: 9px;
+    border-radius: 3px;
     -webkit-box-shadow: var(--shadow-level-1);
     box-shadow: var(--shadow-level-1);
     width: 15%;
@@ -618,7 +653,7 @@
 
 .event-poster {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 3px;
     opacity: .7;
     -webkit-transition: .2s all ease;
     -o-transition: .2s all ease;
@@ -630,20 +665,20 @@
 }
 
 .event-title {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     font-family: "Inter", sans-serif;
     font-weight: 800;
-    letter-spacing: 1.9px;
+    letter-spacing: 1.2px;
     text-decoration: none;
     -webkit-transition: .2s all ease;
     -o-transition: .2s all ease;
     transition: .2s all ease;
     cursor: -webkit-grab;
     cursor: grab;
-    color: var(--grey);
+    color: var(--white);
     background: var(--blue);
     padding: 1rem;
-    border-radius: 9px;
+    border-radius: 3px;
     margin-bottom: .5rem;
     text-transform: uppercase;
     text-align: left;
@@ -651,9 +686,9 @@
 }
 
 .event-description {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: "Inter", sans-serif;
-    font-weight: 800;
+    font-weight: 600;
     text-decoration: none;
     color: #666;
 }
