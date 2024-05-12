@@ -32,8 +32,9 @@ header .welcome-title {
 
 
 header .welcome-title strong {
-    color: var(--chartreuse);
+    color: var(--blue);
     font-size: 4.7rem;
+    font-weight: 900;
 }
 
 header .welcome-sub-title {
@@ -163,7 +164,7 @@ header .form-container {
 }
 
 .form-container .btn.btn.proceed {
-    background: var(--chartreuse);
+    background: var(--blue);
     display: none;
 }
 

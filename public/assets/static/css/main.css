@@ -104,10 +104,10 @@
 
 .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
     font-size: 5rem;
-    width: 30%;
+    width: 40%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 900;
     font-style: normal;
     font-variation-settings:
         "slnt" 0;
@@ -173,7 +173,7 @@
     font-weight: 800;
     font-size: 1rem;
     font-style: normal;
-    letter-spacing: 1px;
+    letter-spacing: .8px;
     text-transform: uppercase;
     text-align: left;
     line-height: 1.3rem;
@@ -522,10 +522,10 @@
 }
 
 .testimonial__text {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 900;
+    font-weight: 800;
     font-style: normal;
     font-variation-settings:
         "slnt" 0;
@@ -630,9 +630,10 @@
 }
 
 .event-title {
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-family: "Inter", sans-serif;
-    font-weight: 900;
+    font-weight: 800;
+    letter-spacing: 1.9px;
     text-decoration: none;
     -webkit-transition: .2s all ease;
     -o-transition: .2s all ease;
@@ -643,23 +644,22 @@
     background: var(--blue);
     padding: 1rem;
     border-radius: 9px;
-    width: 40%;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     text-transform: uppercase;
     text-align: left;
     opacity: .7;
 }
 
 .event-description {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Inter", sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-decoration: none;
     color: #666;
 }
 
 .event-pricing {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: "Inter", sans-serif;
     font-weight: 900;
     text-decoration: none;
@@ -667,9 +667,11 @@
     -webkit-box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .03);
     box-shadow: 0 .5rem .5rem 0 rgba(0, 0, 0, .03);
     color: var(--white);
-    width: 16%;
+    width: 100px;
     text-align: center;
     border-radius: 4px;
+    opacity: .5;
+    padding: .2rem .3rem;
 }
 
 /* Contact section styling */
