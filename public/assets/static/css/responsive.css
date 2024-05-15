@@ -76,6 +76,12 @@
     }
 }
 
+@media (min-width: 560px) {
+    .open-side-menu {
+        display: none;
+    }
+}
+
 @media (max-width: 540px) {
     .hero .hero-content-wrapper {
         padding: 2rem 3rem;

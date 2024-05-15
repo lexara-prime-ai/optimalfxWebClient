@@ -17,16 +17,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body>
+<body onload="TYPE()" id="main">
 
-    <header>
+    <button class="open-side-menu" onclick="openSideMenu()">
+        <a>
+            <i class="fas fa-bars"></i>
+        </a>
+    </button>
 
-        <button class="open-side-menu">
-            <a href="#" onclick="openSideMenu()">
-                <i class="fas fa-bars"></i>
-            </a>
-        </button>
-    </header>
+
     <!-- Main navigation -->
     <nav class="navigation">
         <!-- Company logo -->
@@ -76,8 +75,8 @@
         <a class="btn-close" onclick="closeSideMenu()">
             &times;
         </a>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
+        <a href="#" class="active-link-mobile">Home</a>
+        <a href="#about-us">About</a>
         <a href="#courses">Courses</a>
         <a href="#contact">Contact</a>
     </div>
@@ -92,8 +91,7 @@
                     TRADING MADE EASY
                 </h1>
                 <p class="hero-text">
-                    Learn how to navigate the forex market and achieve your financial goals with our comprehensive
-                    online courses and expert guidance.
+                    <!-- GENERATED DYNAMICALLY -->
                 </p>
             </div>
 

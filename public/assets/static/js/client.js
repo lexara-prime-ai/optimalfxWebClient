@@ -92,7 +92,7 @@ App.verifySessionStatus();
 // TOGGLE SIDE NAVIGATION
 //////////////////////////
 function openSideMenu() {
-  document.getElementById("side-menu").style.width = "250px";
+  document.getElementById("side-menu").style.width = "310px";
 }
 
 function closeSideMenu() {
@@ -115,3 +115,18 @@ window.onscroll = function () {
     header.classList.remove("header-scrolled");
   }
 };
+
+// TEXT ANIMATION
+const subTitleText =
+  " Learn how to navigate the forex market and achieve your financial goals with our comprehensive online courses and expert guidance.";
+let index = 0;
+let typingSpeed = 20;
+
+function TYPE() {
+  if (index < subTitleText.length) {
+    subTitle.innerHTML += subTitleText.charAt(index);
+    index++;
+
+    setTimeout(TYPE, typingSpeed);
+  }
+}
