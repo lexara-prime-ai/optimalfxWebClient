@@ -186,6 +186,7 @@
 }
 
 
+/* Small devices */
 @media (max-width: 320px) {
     html {
         font-size: 60%;
