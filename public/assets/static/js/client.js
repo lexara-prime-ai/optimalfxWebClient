@@ -2,6 +2,7 @@
 const LOG = console.log;
 
 // Selectors
+const subTitle = document.querySelector(".hero-text");
 const countryInput = document.querySelector("#country");
 const usernameInput = document.querySelector("#username");
 const emailInput = document.querySelector("#email");
@@ -12,7 +13,9 @@ const proceedButton = document.querySelector("#proceed-form-btn");
 
 // -> Enroll & View Courses buttons
 const enrollButtonNavigation = document.querySelector("#enroll-navigation");
-const viewCoursesButtonNavigation = document.querySelector("#view-courses-navigation");
+const viewCoursesButtonNavigation = document.querySelector(
+  "#view-courses-navigation"
+);
 const enrollButton = document.querySelector("#enroll");
 const viewCoursesButton = document.querySelector("#view-courses");
 
@@ -72,7 +75,6 @@ class App {
     // Enable [PROCEED] button
     if (localStorage.getItem("SESSION_TOKEN")) {
       viewCoursesButton.classList.add("visible");
-      viewCoursesButtonNavigation.classList.add("visible");
       // Hide the following buttons
       enrollButton.classList.remove("visible");
       enrollButtonNavigation.classList.remove("visible");
@@ -85,3 +87,31 @@ class App {
 }
 
 App.verifySessionStatus();
+
+//////////////////////////
+// TOGGLE SIDE NAVIGATION
+//////////////////////////
+function openSideMenu() {
+  document.getElementById("side-menu").style.width = "250px";
+}
+
+function closeSideMenu() {
+  document.getElementById("side-menu").style.width = "0";
+
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+// ADD STYLES TO HEADER ON SCROLL
+const header = document.querySelector(".navigation");
+window.onscroll = function () {
+  if (
+    document.body.scrollTop >= 100 ||
+    document.documentElement.scrollTop >= 100
+  ) {
+    header.classList.add("header-scrolled");
+    header.classList.remove("header-default");
+  } else {
+    header.classList.add("header-default");
+    header.classList.remove("header-scrolled");
+  }
+};

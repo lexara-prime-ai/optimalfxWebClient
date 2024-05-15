@@ -18,6 +18,15 @@
 </head>
 
 <body>
+
+    <header>
+
+        <button class="open-side-menu">
+            <a href="#" onclick="openSideMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </button>
+    </header>
     <!-- Main navigation -->
     <nav class="navigation">
         <!-- Company logo -->
@@ -59,13 +68,20 @@
                 ENROLL
             </a>
         </button>
-
-        <button class="cta-hero" id="view-courses-navigation view-courses-navigation-mobile">
-            <a href="#courses">
-                VIEW COURSES
-            </a>
-        </button>
     </nav>
+
+
+    <!-- SIDE MENU -->
+    <div id="side-menu" class="side-nav">
+        <a class="btn-close" onclick="closeSideMenu()">
+            &times;
+        </a>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </div>
+
     <!-- Hero section -->
     <section id="hero" class="hero">
         <!-- Hero content wrapper -->
@@ -77,8 +93,7 @@
                 </h1>
                 <p class="hero-text">
                     Learn how to navigate the forex market and achieve your financial goals with our comprehensive
-                    online
-                    courses and expert guidance.
+                    online courses and expert guidance.
                 </p>
             </div>
 
