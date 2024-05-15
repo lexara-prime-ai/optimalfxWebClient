@@ -186,7 +186,7 @@
         background: var(--blue);
         color: var(--white);
     }
-    
+
     .dots {
         position: absolute;
         bottom: 0%;
@@ -198,7 +198,7 @@
     }
 
     .testimonial::before {
-        font-size: 7rem;
+        display: none;
     }
 
     .events {
@@ -257,7 +257,7 @@
     }
 
     .testimonial::before {
-        font-size: 5rem;
+        display: none;
     }
 
     .testimonial__header {
