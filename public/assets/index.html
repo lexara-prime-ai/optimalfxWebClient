@@ -52,10 +52,17 @@
                 </a>
             </li>
         </ul>
-        <!-- CTA button -->
-        <button class="cta-hero">
+
+        <!-- CTA buttons -->
+        <button class="cta-hero" id="enroll-navigation">
             <a href="./pages/register.html">
                 ENROLL
+            </a>
+        </button>
+
+        <button class="cta-hero" id="view-courses-navigation">
+            <a href="./pages/register.html">
+                VIEW COURSES
             </a>
         </button>
     </nav>
@@ -74,9 +81,18 @@
                     courses and expert guidance.
                 </p>
             </div>
-            <button class="cta-hero">
+
+            <!-- CTA Buttons -->
+            <!-- Conditionally display one of them depending on user [REGISTRATION] status -->
+            <button class="cta-hero" id="enroll">
                 <a href="./pages/register.html">
                     ENROLL
+                </a>
+            </button>
+
+            <button class="cta-hero" id="view-courses">
+                <a href="./pages/register.html">
+                    VIEW COURSES
                 </a>
             </button>
         </div>
@@ -171,10 +187,10 @@
             <div class="video-content-wrapper">
                 <!-- Individual course -->
                 <div class="course">
-                    <iframe style="border-radius: 24px;" width="450" height="245"
+                    <!-- <iframe style="border-radius: 24px;" width="450" height="245"
                         src="https://www.youtube.com/embed/IgjuxGqwOHU?si=AIVt22UqLKD4UXws" title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <!-- Course info. -->
                     <div class="course-info-wrapper">
                         <h2 class="video-title">
@@ -445,7 +461,7 @@
         <div class="tradingview-widget-container__widget"></div>
         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
                 target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-      
+
     </div>
     <!--===========-->
     <!-- Custom JS -->
@@ -454,8 +470,7 @@
     <script src="./static/js/main.js"></script>
     <script src="./static/js/client.js"></script>
 
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
-    async>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
         {
             "symbols": [
                 {

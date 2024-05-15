@@ -93,6 +93,43 @@
     opacity: .7;
 }
 
+
+/* CTA BUTTONS */
+#enroll {
+    display: none;
+}
+
+#enroll-navigation {
+    display: none;
+}
+
+#view-courses {
+    display: none;
+}
+
+#view-courses-navigation {
+    display: none;
+}
+
+/* Visible states for CTA buttons */
+#enroll.visible {
+    display: block;
+}
+
+#view-courses.visible {
+    display: block;
+}
+
+#enroll-navigation.visible {
+    display: block;
+}
+
+#view-courses-navigation.visible {
+    display: block;
+}
+
+
+
 .hero {
     background: url(../../images/backgrounds/monitor_with_logo.jpg);
     box-shadow: inset 30em 42em 21em 90em #00000054;
