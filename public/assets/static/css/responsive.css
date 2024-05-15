@@ -169,6 +169,24 @@
 }
 
 @media (max-width:376px) {
+    .hero {
+        background: url(../../images/backgrounds/wall_with_logo.jpg);
+        background-position: right;
+    }
+
+    .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
+        font-size: 3.5rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: right;
+    }
+
+    .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
+        width: 100%;
+        background: var(--blue);
+        color: var(--white);
+    }
+    
     .dots {
         position: absolute;
         bottom: 0%;
