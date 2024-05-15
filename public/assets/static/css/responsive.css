@@ -177,7 +177,9 @@
 @media (max-width:376px) {
     .hero {
         background: url(../../images/backgrounds/wall_with_logo.jpg);
-        background-position: right;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
@@ -185,6 +187,15 @@
         padding: 1rem;
         width: 100%;
         text-align: right;
+        border-radius: 12rem 9rem 10rem 21rem;
+        background: rgb(255, 255, 255);
+        padding-right: 2rem;
+        background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0.5) 90%, rgba(184, 184, 184, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ecd7c5", endColorstr="#ff9300", GradientType=1);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
     }
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
