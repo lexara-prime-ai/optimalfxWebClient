@@ -2,6 +2,7 @@
 const LOG = console.log;
 
 // Selectors
+const countryInput = document.querySelector("#country");
 const usernameInput = document.querySelector("#username");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
@@ -11,20 +12,20 @@ const proceedButton = document.querySelector("#proceed-form-btn");
 
 const ENDPOINTS = Object.freeze({
   // Authenticatio
-  REGISTRATION: "https://optimalfx-latest.onrender.com/api/Auth/register",
-  LOGIN: "https://optimalfx-latest.onrender.com/api/Auth/login",
+  REGISTRATION: "http://localhost:5000/api/Auth/register",
+  LOGIN: "http://localhost:5000/api/Auth/login",
   // Users
-  ADD_USER: "https://optimalfx-latest.onrender.com/api/User",
-  UPDATE_USER: "https://optimalfx-latest.onrender.com/api/User",
-  DELETE_USER: "https://optimalfx-latest.onrender.com/api/User",
-  GET_USER: "https://optimalfx-latest.onrender.com/api/User",
-  GET_USERS: "https://optimalfx-latest.onrender.com/api/User",
+  ADD_USER: "http://localhost:5000/api/User",
+  UPDATE_USER: "http://localhost:5000/api/User",
+  DELETE_USER: "http://localhost:5000/api/User",
+  GET_USER: "http://localhost:5000/api/User",
+  GET_USERS: "http://localhost:5000/api/User",
   // Courses
-  ADD_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
-  UPDATE_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
-  DELETE_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
-  GET_COURSE: "https://optimalfx-latest.onrender.com/api/Course",
-  GET_COURSES: "https://optimalfx-latest.onrender.com/api/Course",
+  ADD_COURSE: "http://localhost:5000/api/Course",
+  UPDATE_COURSE: "http://localhost:5000/api/Course",
+  DELETE_COURSE: "http://localhost:5000/api/Course",
+  GET_COURSE: "http://localhost:5000/api/Course",
+  GET_COURSES: "http://localhost:5000/api/Course",
 });
 
 // [REDIRECT]
@@ -52,21 +53,42 @@ class Client {
   static async registerUser() {
     try {
       if (
+        countryInput.value.length == 0 &&
         usernameInput.value.length == 0 &&
         emailInput.value.length == 0 &&
         passwordInput.value.length == 0
       ) {
+        Toastify({
+          text: "Please fill in the required fields !",
+          duration: 3000,
+          newWindow: true,
+          close: false,
+          gravity: "top",
+          position: "left",
+          stopOnFocus: true,
+          style: {
+            background: "#e23939",
+            color: "#ffffff",
+            borderRadius: "9px",
+            fontWeight: "700",
+            letterSpacing: "1px",
+            textTransform: "capitalize",
+          },
+          // Handle callback after click.
+          onClick: function () {},
+        }).showToast();
         event.preventDefault();
         LOG("Form [VALIDATION] failed");
       } else {
         const PAYLOAD = {
+          country: countryInput.value || null,
           username: usernameInput.value || null,
           email: emailInput.value || null,
           password: passwordInput.value || null,
         };
 
         // [DEBUG] logs
-        LOG({ username: PAYLOAD.username, email: PAYLOAD.email });
+        // LOG({ username: PAYLOAD.username, email: PAYLOAD.email });
 
         // PAYLOAD <OPTIONS>
         const OPTIONS = {
@@ -83,11 +105,72 @@ class Client {
         // [DEBUG] logs
         LOG(USER_RESPONSE);
 
-        // Redirect user to [LOGIN] page.
-        window.location.href =
-          "http://localhost:5500/web_client/public/assets/pages/login.html";
+        if (RESPONSE.status == 200) {
+          Toastify({
+            text: "Registration Successful",
+            duration: 3000,
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "left",
+            stopOnFocus: true,
+            style: {
+              background: "#144681",
+              color: "#ffffff",
+              borderRadius: "9px",
+              fontWeight: "700",
+              letterSpacing: "1px",
+              textTransform: "capitalize",
+            },
+            // Handle callback after click.
+            onClick: function () {},
+          }).showToast();
+
+          // Redirect user to [LOGIN] page.
+          window.location.href =
+            "http://localhost:5500/web_client/public/assets/pages/login.html";
+        } else if (RESPONSE.status == 400) {
+          Toastify({
+            text: "Registration Failed !",
+            duration: 3000,
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "left",
+            stopOnFocus: true,
+            style: {
+              background: "#e23939",
+              color: "#ffffff",
+              borderRadius: "9px",
+              fontWeight: "700",
+              letterSpacing: "1px",
+              textTransform: "capitalize",
+            },
+            // Handle callback after click.
+            onClick: function () {},
+          }).showToast();
+        }
       }
     } catch (error) {
+      Toastify({
+        text: "Registration Failed !",
+        duration: 3000,
+        newWindow: true,
+        close: false,
+        gravity: "top",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "#e23939",
+          color: "#ffffff",
+          borderRadius: "9px",
+          fontWeight: "700",
+          letterSpacing: "1px",
+          textTransform: "capitalize",
+        },
+        // Handle callback after click.
+        onClick: function () {},
+      }).showToast();
       ErrorHandling.propagateError(error, "registerUser");
     }
   }
@@ -128,6 +211,26 @@ class Client {
 
           // Add [TOKEN] to localstorage
           localStorage.setItem("SESSION_TOKEN", SESSION_TOKEN.TOKEN);
+
+          Toastify({
+            text: "Login Successful",
+            duration: 3000,
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "left",
+            stopOnFocus: true,
+            style: {
+              background: "#144681",
+              color: "#ffffff",
+              borderRadius: "9px",
+              fontWeight: "700",
+              letterSpacing: "1px",
+              textTransform: "capitalize",
+            },
+            // Handle callback after click.
+            onClick: function () {},
+          }).showToast();
 
           // Enable [PROCEED] button
           if (localStorage.getItem("SESSION_TOKEN")) {

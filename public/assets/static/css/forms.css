@@ -98,6 +98,31 @@ header .form-container {
     color: var(--grey);
 }
 
+select {
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    letter-spacing: 1px;
+    color: var(--light-dark);
+    border: none;
+    border-radius: .5rem;
+    padding: .8rem;
+    background: #f8f8f8a9;
+    box-shadow: inset 0 1rem 2rem 0 rgba(0, 0, 0, .04);
+    width: 100%;
+    text-transform: none;
+    margin: 1rem 0;
+    transition: .2s all ease;
+}
+
+select:focus {
+    outline: none;
+}
+
 .form-container .registration-form .input-box input {
     font-size: 1rem;
     font-family: "Inter", sans-serif;
@@ -107,7 +132,7 @@ header .form-container {
     font-variation-settings:
         "slnt" 0;
     letter-spacing: 1px;
-    color: var(--grey);
+    color: var(--light-dark);
     border: none;
     border-radius: .5rem;
     padding: .8rem;
@@ -124,7 +149,12 @@ header .form-container {
     border-right: 9px solid var(--blue);
 }
 
-.form-container .btn {
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container .btn {
     width: 100%;
     border: none;
     border-radius: 6px;
@@ -147,30 +177,36 @@ header .form-container {
 }
 
 
-.form-container .btn:hover {
+.button-container .btn:hover {
     transform: translateY(-1px);
     opacity: 1;
 }
 
-.form-container .btn.login {
+.button-container .btn.login {
     background: var(--grey);
-}
-
-.form-container .btn.register a,
-.btn.login a,
-.btn.proceed a {
     text-decoration: none;
     color: var(--white);
+    text-align: center;
 }
 
-.form-container .btn.btn.proceed {
+.button-container .btn.proceed {
     background: var(--blue);
+    text-align: center;
+    text-decoration: none;
     display: none;
 }
 
-.form-container .btn.btn.proceed.visible {
+.button-container .btn.proceed.visible {
     display: block;
 }
+
+.button-container .btn.register {
+    background: var(--blue);
+    text-align: center;
+    text-decoration: none;
+}
+
+
 
 @media (max-width: 1024px) {
     header {

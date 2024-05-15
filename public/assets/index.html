@@ -80,6 +80,11 @@
                 </a>
             </button>
         </div>
+
+
+        <!-- TRADING VIEW DATA -->
+
+
     </section>
     <!-- About section -->
     <section id="about-us" class="about-us">
@@ -135,6 +140,7 @@
         <h1 class="course-section-title">
             OUR COURSES
         </h1>
+        <!-- COURSE OPTIONS -->
         <div class="course-options">
             <ul class="course-levels">
                 <li class="course-level">
@@ -165,10 +171,10 @@
             <div class="video-content-wrapper">
                 <!-- Individual course -->
                 <div class="course">
-                    <video controls poster="./images/backgrounds/hero_bg.jpg">
-                        <source src="https://youtu.be/IgjuxGqwOHU?si=f5nI-_JBhNbdo7W1" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <iframe style="border-radius: 24px;" width="450" height="245"
+                        src="https://www.youtube.com/embed/IgjuxGqwOHU?si=AIVt22UqLKD4UXws" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <!-- Course info. -->
                     <div class="course-info-wrapper">
                         <h2 class="video-title">
@@ -298,8 +304,7 @@
                         have transformed the way I approach the financial markets.
                     </blockquote>
                     <address class="testimonial__author">
-                        <img src="../assets/images/backgrounds/mentor.jpg"
-                            alt="" class="testimonial__photo" />
+                        <img src="../assets/images/backgrounds/mentor.jpg" alt="" class="testimonial__photo" />
                         <h6 class="testimonial__name">Onesmus Bob</h6>
                         <p class="testimonial__location">Lang'ata, Rd.</p>
                     </address>
@@ -435,12 +440,67 @@
         <!-- Credit section -->
         <div class="credit">&copy; copyright <span>OPTIMALFX</span>. all rights reserved</div>
     </section>
+
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+      
+    </div>
     <!--===========-->
     <!-- Custom JS -->
     <!--===========-->
     <script src="./static/js/testimonials.js"></script>
     <script src="./static/js/main.js"></script>
     <script src="./static/js/client.js"></script>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
+    async>
+        {
+            "symbols": [
+                {
+                    "description": "EURO to USD",
+                    "proName": "OANDA:EURUSD"
+                },
+                {
+                    "description": "GBP to USD",
+                    "proName": "OANDA:GBPUSD"
+                },
+                {
+                    "description": "XAU to USD",
+                    "proName": "OANDA:XAUUSD"
+                },
+                {
+                    "description": "AUD to USD",
+                    "proName": "OANDA:AUDUSD"
+                },
+                {
+                    "description": "USD to JPY",
+                    "proName": "OANDA:USDJPY"
+                },
+                {
+                    "description": "USD to CHF",
+                    "proName": "OANDA:USDCHF"
+                },
+                {
+                    "description": "GBP to JPY",
+                    "proName": "OANDA:GBPJPY"
+                },
+                {
+                    "description": "USD to CAD",
+                    "proName": "OANDA:USDCAD"
+                },
+                {
+                    "description": "EURO to JPY",
+                    "proName": "OANDA:EURJPY"
+                }
+            ],
+                "isTransparent": false,
+                    "showSymbolLogo": true,
+                        "colorTheme": "light",
+                            "locale": "en"
+        }
+    </script>
     <!--======================-->
     <!-- Third party packages -->
     <!--======================-->

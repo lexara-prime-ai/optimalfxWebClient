@@ -12,7 +12,7 @@
 
 /* Color Palette */
 :root {
-    --chartreuse: #7fff00;
+    --chartreuse: #b82d2d;
     --blue: #144681;
     --green: #73993D;
     --white: #fff;
@@ -31,6 +31,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
 }
 
 html {
