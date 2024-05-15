@@ -43,7 +43,7 @@
     .mentor-image-wrapper {
         border: none;
     }
-    
+
     .mentor-img {
         width: 150px;
         height: 150px;
@@ -176,7 +176,12 @@
     }
 
     .slider {
-        height: 60rem;
+        height: 50rem;
+    }
+
+    .events {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
     }
 }
 
@@ -184,6 +189,11 @@
 @media (max-width: 320px) {
     html {
         font-size: 60%;
+    }
+
+    .hero {
+        background: url(../../images/backgrounds/wall_with_logo.jpg);
+        background-position: right;
     }
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
@@ -195,6 +205,8 @@
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
         width: 100%;
+        background: var(--blue);
+        color: var(--white);
     }
 
     .course-levels {
@@ -222,7 +234,7 @@
     }
 
     .testimonial::before {
-        font-size: 10rem;
+        font-size: 5rem;
     }
 
     .testimonial__header {
@@ -233,4 +245,8 @@
         font-size: 1.4rem;
     }
 
+    .events {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+    }
 }
