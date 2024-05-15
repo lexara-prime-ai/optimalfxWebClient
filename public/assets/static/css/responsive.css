@@ -186,6 +186,17 @@
         font-size: 60%;
     }
 
+    .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
+        font-size: 3.5rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: right;
+    }
+
+    .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
+        width: 100%;
+    }
+
     .course-levels {
         display: none;
     }
