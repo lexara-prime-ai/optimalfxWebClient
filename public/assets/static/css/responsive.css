@@ -197,6 +197,10 @@
         height: 50rem;
     }
 
+    .testimonial::before {
+        font-size: 7rem;
+    }
+
     .events {
         margin-top: 6rem;
         margin-bottom: 4rem;
