@@ -105,10 +105,12 @@
 
 #view-courses {
     display: none;
+    width: 150px;
 }
 
 #view-courses-navigation {
     display: none;
+    width: 150px;
 }
 
 /* Visible states for CTA buttons */
@@ -187,6 +189,15 @@
     backdrop-filter: blur(20px);
     border-radius: .3rem;
     padding: 2rem;
+}
+
+/* TRADING VIEW CONTENT */ 
+.trading-view-content {
+    position: relative;
+    top: 125px;
+    width: 100%;
+    pointer-events: none;
+    box-shadow: var(--shadow-level-2);
 }
 
 /**************************/
