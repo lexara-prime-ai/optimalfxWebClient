@@ -92,7 +92,7 @@ App.verifySessionStatus();
 // TOGGLE SIDE NAVIGATION
 //////////////////////////
 function openSideMenu() {
-  document.getElementById("side-menu").style.width = "310px";
+  document.getElementById("side-menu").style.width = "100%";
 }
 
 function closeSideMenu() {

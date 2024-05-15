@@ -131,11 +131,16 @@
     box-shadow: var(--shadow-level-1);
     position: fixed;
     z-index: 1000000000;
-    top: 10px;
+    top: 22px;
     right: 22px;
 }
 
 .open-side-menu a {
+    color: var(--white);
+}
+
+.side-nav a.active-link-mobile {
+    background: var(--blue);
     color: var(--white);
 }
 
