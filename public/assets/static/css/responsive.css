@@ -176,8 +176,8 @@
 
 @media (max-width:376px) {
     .hero {
-        background: url(../../images/backgrounds/wall_with_logo.jpg);
-        background-position: left;
+        background: url(../../images/backgrounds/hero_bg_3.jpg);
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }

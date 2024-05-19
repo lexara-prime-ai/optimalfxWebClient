@@ -3,8 +3,9 @@
 
 
 header {
-    background: url(../../images/backgrounds/abstract_white_bg.jpg);
+    background: url(../../images/backgrounds/notebook_phone_with_logo.jpg);
     background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -18,7 +19,7 @@ header .welcome-title-content {
 
 header .welcome-title {
     font-size: 3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -35,15 +36,16 @@ header .welcome-title strong {
     color: var(--blue);
     font-size: 4.7rem;
     font-weight: 900;
+    font-family: "Raleway", sans-serif;
 }
 
 header .welcome-sub-title {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: .6rem;
-    color: var(--light-dark);
+    font-size: .9rem;
+    color: var(--green);
     letter-spacing: 1.4px;
     text-transform: uppercase;
 }
@@ -70,7 +72,7 @@ header .form-container {
 .form-container .registration-form .registration-form-title {
     margin-bottom: 1rem;
     font-size: 2rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -100,7 +102,7 @@ header .form-container {
 
 select {
     font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -125,7 +127,7 @@ select:focus {
 
 .form-container .registration-form .input-box input {
     font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -160,7 +162,7 @@ select:focus {
     border-radius: 6px;
     background: var(--blue);
     font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -183,7 +185,7 @@ select:focus {
 }
 
 .button-container .btn.login {
-    background: var(--grey);
+    background: var(--green);
     text-decoration: none;
     color: var(--white);
     text-align: center;

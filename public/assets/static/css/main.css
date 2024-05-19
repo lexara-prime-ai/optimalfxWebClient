@@ -67,7 +67,7 @@
 
 .navigation .nav-links .link-item .link {
     text-decoration: none;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -147,7 +147,7 @@
 }
 
 .cta-hero {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -166,6 +166,7 @@
 }
 
 .cta-hero a {
+    font-family: "Catamaran", sans-serif;
     color: var(--white);
     text-decoration: none;
 }
@@ -214,7 +215,7 @@
 
 
 .hero {
-    background: url(../../images/backgrounds/monitor_with_logo.jpg);
+    background: url(../../images/backgrounds/hero_bg_3.jpg);
     box-shadow: inset 30em 42em 21em 90em #00000054;
     background-size: cover;
     background-repeat: no-repeat;
@@ -231,7 +232,7 @@
 .hero .hero-content-wrapper .hero-text-content-wrapper .hero-title {
     font-size: 5rem;
     width: 40%;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -243,7 +244,7 @@
 }
 
 .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -283,7 +284,7 @@
 
 .about-section-title {
     font-size: 3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -305,13 +306,13 @@
 }
 
 .about-us-text .text-content {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-size: 1rem;
     font-style: normal;
     letter-spacing: .8px;
-    text-transform: uppercase;
+    text-transform: none;
     text-align: left;
     line-height: 1.3rem;
 }
@@ -351,7 +352,7 @@
 .image-title,
 .mentor-name {
     font-size: 1.6rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
@@ -359,14 +360,14 @@
 }
 
 .image-title {
-    color: #414141;
+    color: var(--blue);
     font-weight: 900;
     font-size: 2rem;
     margin-top: 2rem;
 }
 
 .mentor-name {
-    color: #414141;
+    color: var(--green);
     font-weight: 900;
     font-size: 1.2rem;
 }
@@ -385,14 +386,14 @@
 
 /* Course section styling */
 .course-section {
-    background: var(--white-alt);
+    background: #FAFAFE;
     text-align: center;
     padding: 4rem;
 }
 
 .course-section-title {
     font-size: 3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -429,7 +430,7 @@
 
 .course-levels .course-level a {
     font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     text-decoration: none;
     -webkit-transition: .2s all ease;
@@ -469,7 +470,7 @@
 
 .course-info-wrapper {
     text-align: left;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-size: .7rem;
@@ -480,7 +481,13 @@
     line-height: 1.3rem;
 }
 
+.video-title {
+    font-family: "Catamaran", sans-serif;
+    text-transform: capitalize;
+}
+
 .course-info-wrapper .course-description {
+    font-family: "Catamaran", sans-serif;
     color: #858585;
     border-left: 1px solid var(--grey);
     padding-left: .5rem;
@@ -489,6 +496,7 @@
 }
 
 .course-info-wrapper .course-pricing {
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
     font-size: 1.1rem;
     background: var(--blue);
@@ -508,9 +516,9 @@
 }
 
 .testimonials-title-wrapper h2 {
-    color: var(--grey);
+    color: var(--blue);
     font-size: 3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -522,7 +530,7 @@
 .testimonials-title-wrapper h3 {
     color: var(--blue);
     font-size: 1.6rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -532,6 +540,7 @@
 }
 
 .testimonials-title-wrapper h3 span {
+    font-family: "Raleway", sans-serif;
     color: var(--chartreuse);
 }
 
@@ -594,6 +603,10 @@
     width: 5.5rem;
     font-size: 3.25rem;
     cursor: pointer;
+}
+
+.slider__btn:hover {
+    color: var(--green);
 }
 
 .slider__btn--left {
@@ -665,7 +678,7 @@
 
 .testimonial__header {
     font-size: 2.25rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -678,7 +691,7 @@
 
 .testimonial__text {
     font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -691,7 +704,7 @@
 .testimonial__author {
     margin-left: 3rem;
     font-size: 1.7rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -718,7 +731,7 @@
 
 .testimonial__name {
     font-size: 1.7rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
@@ -732,18 +745,20 @@
 }
 
 .testimonial__location {
+    font-family: "Raleway", sans-serif;
     font-size: 1.5rem;
     color: var(--blue);
 }
 
 /* Events section styling */
 .events {
+    background: #FAFAFE;
     padding: 4rem;
 }
 
 .events .event-section-title {
     font-size: 2.4rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
     letter-spacing: 1.2px;
     text-decoration: none;
@@ -787,7 +802,7 @@
 
 .event-title {
     font-size: 1.1rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     letter-spacing: 1.2px;
     text-decoration: none;
@@ -808,7 +823,7 @@
 
 .event-description {
     font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Catamaran", sans-serif;
     font-weight: 600;
     text-decoration: none;
     color: #666;
@@ -816,7 +831,7 @@
 
 .event-pricing {
     font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
     text-decoration: none;
     background: var(--chartreuse);
@@ -839,7 +854,7 @@
 
 .contact .heading {
     font-size: 3rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 900;
     text-decoration: none;
     -webkit-transition: .2s all ease;
@@ -847,7 +862,7 @@
     transition: .2s all ease;
     cursor: -webkit-grab;
     cursor: grab;
-    color: var(--grey);
+    color: var(--blue);
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
@@ -855,7 +870,7 @@
 .contact .contact-sub-heading {
     font-size: 1.4rem;
     opacity: .7;
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     text-decoration: none;
     -webkit-transition: .2s all ease;
@@ -869,10 +884,12 @@
 }
 
 .contact-sub-heading span {
+    font-family: "Raleway", sans-serif;
     color: var(--chartreuse);
 }
 
 .contact-sub-heading strong {
+    font-family: "Raleway", sans-serif;
     color: var(--blue);
     font-weight: 800;
 }
@@ -887,13 +904,13 @@ textarea {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-size: 1rem;
     font-style: normal;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: left;
     line-height: 1.3rem;
     color: #242424;
@@ -1000,6 +1017,7 @@ textarea:focus {
     -o-transition: .2s all ease;
     transition: .2s all ease;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .contact form .contact-btn:hover {
@@ -1019,19 +1037,21 @@ textarea:focus {
     height: 300px;
     background: var(--white-alt);
     text-transform: uppercase;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-size: 1rem;
     font-style: normal;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .footer-content-wrapper .box h3 {
+    font-family: "Raleway", sans-serif;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    color: var(--green);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1039,6 +1059,7 @@ textarea:focus {
 }
 
 .footer-content-wrapper .box-info {
+    font-family: "Raleway", sans-serif;
     color: var(--blue);
     font-size: .9rem;
 }
@@ -1062,7 +1083,7 @@ textarea:focus {
 
 .credit {
     text-transform: uppercase;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Catamaran", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-size: .8rem;
@@ -1074,6 +1095,7 @@ textarea:focus {
 }
 
 .credit span {
+    font-family: "Raleway", sans-serif;
     color: var(--blue);
 }
 
