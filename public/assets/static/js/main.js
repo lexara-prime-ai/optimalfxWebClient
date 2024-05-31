@@ -7,6 +7,7 @@ const slider = function () {
 
   let curSlide = 0;
   const maxSlide = slides.length;
+  let slideInterval;
 
   // Functions
   const createDots = function () {
@@ -36,31 +37,30 @@ const slider = function () {
 
   // Next slide
   const nextSlide = function () {
-    if (curSlide === maxSlide - 1) {
-      curSlide = 0;
-    } else {
-      curSlide++;
-    }
-
+    curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
     goToSlide(curSlide);
     activateDot(curSlide);
   };
 
   const prevSlide = function () {
-    if (curSlide === 0) {
-      curSlide = maxSlide - 1;
-    } else {
-      curSlide--;
-    }
+    curSlide = (curSlide === 0) ? maxSlide - 1 : curSlide - 1;
     goToSlide(curSlide);
     activateDot(curSlide);
+  };
+
+  const startSlide = function () {
+    slideInterval = setInterval(nextSlide, 3000);
+  };
+
+  const stopSlide = function () {
+    clearInterval(slideInterval);
   };
 
   const init = function () {
     goToSlide(0);
     createDots();
-
     activateDot(0);
+    startSlide();
   };
   init();
 
@@ -80,8 +80,59 @@ const slider = function () {
       activateDot(slide);
     }
   });
+
+  // Pause auto-slide on hover and resume on mouse leave
+  document.querySelector(".slider").addEventListener("mouseover", stopSlide);
+  document.querySelector(".slider").addEventListener("mouseout", startSlide);
+
+  // Pause auto-slide on touch and resume on touch end (mobile)
+  document.querySelector(".slider").addEventListener("touchstart", stopSlide);
+  document.querySelector(".slider").addEventListener("touchend", startSlide);
 };
+
 slider();
+
+// TradingView Slider
+// const tradingViewSlider = function () {
+//   const slider = document.querySelector(".tradingview-slider");
+//   const slides = document.querySelectorAll(".tradingview-slide");
+//   let curSlide = 0;
+//   const maxSlide = slides.length;
+//   let slideInterval;
+
+//   const goToSlide = function (slide) {
+//     slider.style.transform = `translateX(-${100 * slide}%)`;
+//   };
+
+//   const nextSlide = function () {
+//     curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
+//     goToSlide(curSlide);
+//   };
+
+//   const startSlide = function () {
+//     slideInterval = setInterval(nextSlide, 3000);
+//   };
+
+//   const stopSlide = function () {
+//     clearInterval(slideInterval);
+//   };
+
+//   const init = function () {
+//     goToSlide(0);
+//     startSlide();
+//   };
+//   init();
+
+//   // Pause auto-slide on hover and resume on mouse leave (desktop)
+//   slider.addEventListener("mouseover", stopSlide);
+//   slider.addEventListener("mouseout", startSlide);
+
+//   // Pause auto-slide on touch and resume on touch end (mobile)
+//   slider.addEventListener("touchstart", stopSlide);
+//   slider.addEventListener("touchend", startSlide);
+// };
+
+// tradingViewSlider();
 
 
 // Check whether user has an [ACTIVE] session

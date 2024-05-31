@@ -265,14 +265,33 @@
     padding: 2rem;
 }
 
-/* TRADING VIEW CONTENT */
-.trading-view-content {
-    position: relative;
-    top: 125px;
-    width: 100%;
-    pointer-events: none;
-    box-shadow: var(--shadow-level-2);
+/* Trading view section styling */
+.trading-view-section {
+    text-align: center;
+    margin-top: 12.6rem;
 }
+
+.trading-view-title-wrapper h2 {
+    color: var(--blue);
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 1rem;
+}
+
+/* Trading view slider */
+.tradingview-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.tradingview-slide {
+    min-width: 100%;
+    transition: transform 1s;
+}
+
 
 /**************************/
 /* About section styling */
@@ -667,8 +686,8 @@
 .testimonial::before {
     content: '\201C';
     position: absolute;
-    top: -5.7rem;
-    left: -10rem;
+    top: -8rem;
+    left: -12rem;
     line-height: 1;
     font-size: 20rem;
     font-family: inherit;
