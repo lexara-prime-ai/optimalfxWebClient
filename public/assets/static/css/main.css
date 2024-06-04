@@ -442,7 +442,7 @@
 /* Gallery Section Styling */
 .gallery-section {
     padding: 4rem 0;
-    background: linear-gradient(to bottom right, #f7f7f7, #e2e2e2);
+    background: #FAFAFE;
     text-align: center;
     position: relative;
 }
@@ -462,7 +462,7 @@
     margin: 0 auto;
     overflow: hidden;
 }
-
+  
 .gallery-slide-container {
     display: flex;
     transition: transform 1s ease-in-out;
@@ -486,8 +486,7 @@
 }
 
 .gallery-image-container img {
-    width: 100%;
-    height: auto;
+    object-fit: cover;
     display: block;
     transition: transform 0.3s;
 }
@@ -501,6 +500,7 @@
     top: 50%;
     z-index: 10;
     border: none;
+    background: #FAFAFE;
     color: #333;
     border-radius: 50%;
     height: 4rem;
@@ -1203,6 +1203,153 @@ textarea:focus {
     opacity: .7;
 }
 
+/* Copy Trading Section Styling */
+.copy-trading-section {
+    background: #FAFAFE;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .copy-trading-content {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .copy-trading-content:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .copy-trading-content h2 {
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--blue);
+    text-transform: uppercase;
+  }
+  
+  .copy-trading-content p,
+  .copy-trading-instructions li{
+    font-family: "Catamaran", sans-serif;
+    font-size: 1rem;
+    color: #898CA3;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .copy-trading-content p span {
+    font-family: "Catamaran", sans-serif;
+    color: #ED1C24;
+    
+  }
+  
+  .copy-trading-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .copy-trading-info img {
+    width: 300px;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-left: 1rem;
+    border: 1px solid var(--chartreuse);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .copy-trading-instructions {
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .copy-trading-instructions li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .copy-trading-instructions li span {
+    color: var(--blue);
+    font-family: "Catamaran", sans-serif;
+  }
+  
+  .btn {
+    font-family: "Catamaran", sans-serif;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--green);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    color: var(--blue);
+    background-color: var(--dark-green);
+    box-shadow: 0 0 5px var(--green), 0 0 25px var(--green);
+  }
+
+  /* Animation for instructions list */
+.copy-trading-instructions li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .copy-trading-content {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .copy-trading-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .copy-trading-info img {
+      margin: 0 0 1rem 1rem;
+    }
+  }
+  
+
 .footer-content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1235,12 +1382,14 @@ textarea:focus {
     -ms-flex-align: center;
     align-items: center;
     gap: .5rem;
+    margin-bottom: 1rem;
 }
 
 .footer-content-wrapper .box-info {
-    font-family: "Raleway", sans-serif;
+    font-family: "Catamaran", sans-serif;
     color: var(--blue);
     font-size: .9rem;
+    font-weight: 900;
 }
 
 /* Copy Trading URL section styling */
@@ -1258,6 +1407,18 @@ textarea:focus {
     text-decoration: none;
     padding: .3rem;
     border-radius: 3px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    font-size: 2rem;
+    color: var(--blue);
 }
 
 .credit {

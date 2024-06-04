@@ -105,55 +105,57 @@ const gallerySlider = function () {
 
   // Function to go to a specific slide
   const goToSlide = function (slide) {
-      slides.forEach((s, i) => {
-          s.style.transform = `translateX(${100 * (i - slide)}%)`;
-      });
+    slide = Math.max(0, Math.min(slide, maxSlide - 1)); // Clamp slide index
+    slides.forEach((s, i) => {
+      s.style.transform = `translateX(${100 * (i - slide)}%)`;
+    });
   };
 
   // Function to create indicators for each slide
   const createIndicators = function () {
-      slides.forEach((_, i) => {
-          const indicator = document.createElement("button");
-          indicator.classList.add("gallery-indicator");
-          if (i === curSlide) indicator.classList.add("active");
-          indicator.dataset.slide = i;
-          indicatorContainer.appendChild(indicator);
-      });
+    slides.forEach((_, i) => {
+      const indicator = document.createElement("button");
+      indicator.classList.add("gallery-indicator");
+      if (i === curSlide) indicator.classList.add("active");
+      indicator.dataset.slide = i;
+      indicatorContainer.appendChild(indicator);
+    });
   };
 
   // Function to activate the correct indicator
   const activateIndicator = function (slide) {
-      document.querySelectorAll(".gallery-indicator").forEach(indicator => {
-          indicator.classList.remove("active");
-      });
-      document.querySelector(`.gallery-indicator[data-slide="${slide}"]`).classList.add("active");
+    document.querySelectorAll(".gallery-indicator").forEach(indicator => {
+      indicator.classList.remove("active");
+    });
+    document.querySelector(`.gallery-indicator[data-slide="${slide}"]`).classList.add("active");
   };
 
   // Function to move to the next slide
   const nextSlide = function () {
-      curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
-      goToSlide(curSlide);
-      activateIndicator(curSlide);
+    curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
+    goToSlide(curSlide);
+    activateIndicator(curSlide);
+    console.log(curSlide);
   };
 
   // Function to move to the previous slide
   const prevSlide = function () {
-      curSlide = (curSlide === 0) ? maxSlide - 1 : curSlide - 1;
-      goToSlide(curSlide);
-      activateIndicator(curSlide);
+    curSlide = (curSlide === 0) ? maxSlide - 1 : curSlide - 1;
+    goToSlide(curSlide);
+    activateIndicator(curSlide);
   };
 
   // Function to automatically slide through the images
   const autoSlide = function () {
-      setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
   };
 
   // Initialize the slider
   const init = function () {
-      goToSlide(0);
-      createIndicators();
-      activateIndicator(0);
-      autoSlide();
+    goToSlide(0);
+    createIndicators();
+    activateIndicator(0);
+    autoSlide();
   };
   init();
 
@@ -163,16 +165,17 @@ const gallerySlider = function () {
 
   // Event listener for indicators
   indicatorContainer.addEventListener("click", function (e) {
-      if (e.target.classList.contains("gallery-indicator")) {
-          const { slide } = e.target.dataset;
-          curSlide = parseInt(slide, 10);
-          goToSlide(curSlide);
-          activateIndicator(curSlide);
-      }
+    if (e.target.classList.contains("gallery-indicator")) {
+      const { slide } = e.target.dataset;
+      curSlide = parseInt(slide, 10);
+      goToSlide(curSlide);
+      activateIndicator(curSlide);
+    }
   });
 };
 
 gallerySlider();
+
 
 
 // Check whether user has an [ACTIVE] session
