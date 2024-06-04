@@ -505,7 +505,7 @@
     border-radius: 50%;
     height: 4rem;
     width: 4rem;
-    font-size: 2rem;
+    font-size: 3.25rem;
     cursor: pointer;
     transform: translateY(-50%);
     transition: background 0.3s, transform 0.3s;
@@ -833,7 +833,7 @@
 }
 
 .dots__dot--active {
-    background-color: #888;
+    background-color: var(--blue);
     opacity: 1;
 }
 
