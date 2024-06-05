@@ -1,23 +1,22 @@
 // Ensure the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Function to hide the preloader
   function hidePreloader() {
-    const preloader = document.getElementById('preloader');
-    const mainContent = document.getElementById('main-content');
+    const preloader = document.getElementById("preloader");
+    const mainContent = document.getElementById("main-content");
     if (preloader) {
-      preloader.style.opacity = '0';
-      preloader.style.transition = 'opacity 0.6s ease-out';
+      preloader.style.opacity = "0";
+      preloader.style.transition = "opacity 0.6s ease-out";
       setTimeout(() => {
-        preloader.style.display = 'none';
-        mainContent.style.display = 'block';
+        preloader.style.display = "none";
+        mainContent.style.display = "block";
       }, 600); // Wait for the opacity transition to finish before hiding
     }
   }
 
   // Add event listener for page load
-  window.addEventListener('load', hidePreloader);
+  window.addEventListener("load", hidePreloader);
 });
-
 
 // Slider
 const slider = function () {

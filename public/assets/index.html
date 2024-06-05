@@ -45,611 +45,614 @@
     <div id="preloader"></div>
 
     <div id="main-content">
-    <button class="open-side-menu" onclick="openSideMenu()">
-      <a>
-        <i class="fas fa-bars"></i>
-      </a>
-    </button>
-
-    <!-- Main navigation -->
-    <nav class="navigation">
-      <!-- Company logo -->
-      <div class="logo-wrapper">
-        <img
-          src="./images/logos/logo_small_no_bg_horizontal.png"
-          alt="logo"
-          class="logo"
-        />
-      </div>
-      <!-- Navigation Links -->
-      <ul class="nav-links">
-        <li class="link-item">
-          <a href="#" class="link"> Home </a>
-        </li>
-        <li class="link-item">
-          <a href="#about-us" class="link"> About </a>
-        </li>
-        <li class="link-item">
-          <a href="#courses" class="link"> Courses </a>
-        </li>
-        <li class="link-item">
-          <a href="#events" class="link"> Events </a>
-        </li>
-        <li class="link-item">
-          <a href="#contact" class="link"> Contact </a>
-        </li>
-      </ul>
-
-      <!-- CTA buttons -->
-      <button class="cta-hero" id="enroll-navigation">
-        <a href="./pages/register.html"> ENROLL </a>
+      <button class="open-side-menu" onclick="openSideMenu()">
+        <a>
+          <i class="fas fa-bars"></i>
+        </a>
       </button>
-    </nav>
 
-    <!-- SIDE MENU -->
-    <div id="side-menu" class="side-nav">
-      <a class="btn-close" onclick="closeSideMenu()"> &times; </a>
-      <a href="#" class="active-link-mobile">Home</a>
-      <a href="#about-us">About</a>
-      <a href="#courses">Courses</a>
-      <a href="#events">Events</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <!-- Hero section -->
-    <section id="hero" class="hero">
-      <!-- Hero content wrapper -->
-      <div class="hero-content-wrapper">
-        <!-- Text content wrapper -->
-        <div class="hero-text-content-wrapper">
-          <h1 class="hero-title">
-            TRADING
-            <br />
-            MADE EASY
-          </h1>
-          <p class="hero-text">
-            <!-- GENERATED DYNAMICALLY -->
-          </p>
+      <!-- Main navigation -->
+      <nav class="navigation">
+        <!-- Company logo -->
+        <div class="logo-wrapper">
+          <img
+            src="./images/logos/logo_small_no_bg_horizontal.png"
+            alt="logo"
+            class="logo"
+          />
         </div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li class="link-item">
+            <a href="#" class="link"> Home </a>
+          </li>
+          <li class="link-item">
+            <a href="#about-us" class="link"> About </a>
+          </li>
+          <li class="link-item">
+            <a href="#courses" class="link"> Courses </a>
+          </li>
+          <li class="link-item">
+            <a href="#events" class="link"> Events </a>
+          </li>
+          <li class="link-item">
+            <a href="#contact" class="link"> Contact </a>
+          </li>
+        </ul>
 
-        <!-- CTA Buttons -->
-        <!-- Conditionally display one of them depending on user [REGISTRATION] status -->
-        <button class="cta-hero" id="enroll">
+        <!-- CTA buttons -->
+        <button class="cta-hero" id="enroll-navigation">
           <a href="./pages/register.html"> ENROLL </a>
         </button>
+      </nav>
 
-        <button class="cta-hero" id="view-courses">
-          <a href="#courses"> VIEW COURSES </a>
-        </button>
+      <!-- SIDE MENU -->
+      <div id="side-menu" class="side-nav">
+        <a class="btn-close" onclick="closeSideMenu()"> &times; </a>
+        <a href="#" class="active-link-mobile">Home</a>
+        <a href="#about-us">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-        <!--==== Trading view content ======-->
-        <section class="trading-view-section">
-          <div class="tradingview-widget-container">
-            <div class="tradingview-slider">
-              <div class="tradingview-slide">
-                <div class="tradingview-widget-container__widget">
-                  <script
-                    type="text/javascript"
-                    src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
-                    async
-                  >
-                    {
-                        "symbols": [
-                            {
-                                "description": "EURO to USD",
-                                "proName": "OANDA:EURUSD"
-                            },
-                            {
-                                "description": "GBP to USD",
-                                "proName": "OANDA:GBPUSD"
-                            },
-                            {
-                                "description": "XAU to USD",
-                                "proName": "OANDA:XAUUSD"
-                            },
-                            {
-                                "description": "AUD to USD",
-                                "proName": "OANDA:AUDUSD"
-                            },
-                            {
-                                "description": "USD to JPY",
-                                "proName": "OANDA:USDJPY"
-                            },
-                            {
-                                "description": "USD to CHF",
-                                "proName": "OANDA:USDCHF"
-                            },
-                            {
-                                "description": "GBP to JPY",
-                                "proName": "OANDA:GBPJPY"
-                            },
-                            {
-                                "description": "USD to CAD",
-                                "proName": "OANDA:USDCAD"
-                            },
-                            {
-                                "description": "EURO to JPY",
-                                "proName": "OANDA:EURJPY"
-                            }
-                        ],
-                        "isTransparent": false,
-                        "showSymbolLogo": true,
-                        "colorTheme": "light",
-                        "locale": "en"
-                    }
-                  </script>
+      <!-- Hero section -->
+      <section id="hero" class="hero">
+        <!-- Hero content wrapper -->
+        <div class="hero-content-wrapper">
+          <!-- Text content wrapper -->
+          <div class="hero-text-content-wrapper">
+            <h1 class="hero-title">
+              TRADING
+              <br />
+              MADE EASY
+            </h1>
+            <p class="hero-text">
+              <!-- GENERATED DYNAMICALLY -->
+            </p>
+          </div>
+
+          <!-- CTA Buttons -->
+          <!-- Conditionally display one of them depending on user [REGISTRATION] status -->
+          <button class="cta-hero" id="enroll">
+            <a href="./pages/register.html"> ENROLL </a>
+          </button>
+
+          <button class="cta-hero" id="view-courses">
+            <a href="#courses"> VIEW COURSES </a>
+          </button>
+
+          <!--==== Trading view content ======-->
+          <section class="trading-view-section">
+            <div class="tradingview-widget-container">
+              <div class="tradingview-slider">
+                <div class="tradingview-slide">
+                  <div class="tradingview-widget-container__widget">
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
+                      async
+                    >
+                      {
+                          "symbols": [
+                              {
+                                  "description": "EURO to USD",
+                                  "proName": "OANDA:EURUSD"
+                              },
+                              {
+                                  "description": "GBP to USD",
+                                  "proName": "OANDA:GBPUSD"
+                              },
+                              {
+                                  "description": "XAU to USD",
+                                  "proName": "OANDA:XAUUSD"
+                              },
+                              {
+                                  "description": "AUD to USD",
+                                  "proName": "OANDA:AUDUSD"
+                              },
+                              {
+                                  "description": "USD to JPY",
+                                  "proName": "OANDA:USDJPY"
+                              },
+                              {
+                                  "description": "USD to CHF",
+                                  "proName": "OANDA:USDCHF"
+                              },
+                              {
+                                  "description": "GBP to JPY",
+                                  "proName": "OANDA:GBPJPY"
+                              },
+                              {
+                                  "description": "USD to CAD",
+                                  "proName": "OANDA:USDCAD"
+                              },
+                              {
+                                  "description": "EURO to JPY",
+                                  "proName": "OANDA:EURJPY"
+                              }
+                          ],
+                          "isTransparent": false,
+                          "showSymbolLogo": true,
+                          "colorTheme": "light",
+                          "locale": "en"
+                      }
+                    </script>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- =========================== -->
-      </div>
-
-      <!-- TRADING VIEW DATA -->
-    </section>
-    <!-- About section -->
-    <section id="about-us" class="about-us">
-      <h1 class="about-section-title">ABOUT US</h1>
-      <!-- About us content -->
-      <div class="about-us-content">
-        <div class="mentor-image-wrapper">
-          <!-- Image description -->
-          <div class="image-description">
-            <img
-              src="./images/backgrounds/mentor_img_2.jpg"
-              alt="mentor"
-              class="mentor-img"
-            />
-            <h2 class="image-title">OUR MENTOR</h2>
-            <h2 class="mentor-name">NICK GITHINJI</h2>
-          </div>
+          <!-- =========================== -->
         </div>
-        <!-- Description -->
-        <div class="about-us-description-content">
-          <div class="about-us-text">
-            <p class="text-content">
-              <span>OptimalFX</span> is a leading provider of forex trading
-              education and resources. With years of experience in the financial
-              markets, our team is dedicated to helping individuals learn the
-              ins and outs of forex trading and build a solid foundation for
-              success.
-              <br />
-              <br />
-              Our comprehensive courses cover everything from the basics of
-              forex trading to advanced strategies and techniques. Backed by
-              industry experts and proven methodologies, our curriculum is
-              designed to equip you with the knowledge and skills needed to
-              thrive in the forex market.
-              <br />
-              <br />
-              At OptimalFX, we believe in transparency, integrity, and
-              continuous improvement. Join our community today and embark on
-              your journey to becoming a confident and profitable forex trader.
-            </p>
-          </div>
-          <!-- About us video -->
-          <div class="about-us-video-wrapper">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Gallery section -->
-    <section class="gallery-section" id="gallery">
-      <div class="gallery-title-wrapper">
-        <h2>TRADES WE HAVE DONE</h2>
-      </div>
-      <div class="gallery-slider">
-        <button class="gallery-slider__btn gallery-slider__btn--left">
-          &larr;
-        </button>
-        <div class="gallery-slide-container">
-          <div class="gallery-slide">
-            <div class="gallery-image-container">
+        <!-- TRADING VIEW DATA -->
+      </section>
+      <!-- About section -->
+      <section id="about-us" class="about-us">
+        <h1 class="about-section-title">ABOUT US</h1>
+        <!-- About us content -->
+        <div class="about-us-content">
+          <div class="mentor-image-wrapper">
+            <!-- Image description -->
+            <div class="image-description">
               <img
-                src="./images/backgrounds/trade image 1.jpg"
-                alt="Trade Image 1"
+                src="./images/backgrounds/mentor_img_2.jpg"
+                alt="mentor"
+                class="mentor-img"
               />
+              <h2 class="image-title">OUR MENTOR</h2>
+              <h2 class="mentor-name">NICK GITHINJI</h2>
             </div>
           </div>
-          <div class="gallery-slide">
-            <div class="gallery-image-container">
-              <img
-                src="./images/backgrounds/trade image 2.jpg"
-                alt="Trade Image 2"
-              />
+          <!-- Description -->
+          <div class="about-us-description-content">
+            <div class="about-us-text">
+              <p class="text-content">
+                <span>OptimalFX</span> is a leading provider of forex trading
+                education and resources. With years of experience in the
+                financial markets, our team is dedicated to helping individuals
+                learn the ins and outs of forex trading and build a solid
+                foundation for success.
+                <br />
+                <br />
+                Our comprehensive courses cover everything from the basics of
+                forex trading to advanced strategies and techniques. Backed by
+                industry experts and proven methodologies, our curriculum is
+                designed to equip you with the knowledge and skills needed to
+                thrive in the forex market.
+                <br />
+                <br />
+                At OptimalFX, we believe in transparency, integrity, and
+                continuous improvement. Join our community today and embark on
+                your journey to becoming a confident and profitable forex
+                trader.
+              </p>
             </div>
-          </div>
-          <div class="gallery-slide">
-            <div class="gallery-image-container">
-              <img
-                src="./images/backgrounds/trade image 3.jpg"
-                alt="Trade Image 3"
-              />
-            </div>
-          </div>
-          <div class="gallery-slide">
-            <div class="gallery-image-container">
-              <img
-                src="./images/backgrounds/trade image 4.jpg"
-                alt="Trade Image 3"
-              />
+            <!-- About us video -->
+            <div class="about-us-video-wrapper">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
-        <button class="gallery-slider__btn gallery-slider__btn--right">
-          &rarr;
-        </button>
-      </div>
-      <div class="gallery-indicators"></div>
-    </section>
+      </section>
 
-    <!-- Cousre section -->
-    <section class="course-section" id="courses">
-      <h1 class="course-section-title">OUR COURSES</h1>
-      <!-- COURSE OPTIONS -->
-      <div class="course-options">
-        <ul class="course-levels">
-          <li class="course-level">
-            <a href="#" class="level active"> BEGINNER </a>
-          </li>
-          <li class="course-level">
-            <a href="#" class="level"> INTERMEDIATE </a>
-          </li>
-          <li class="course-level">
-            <a href="#" class="level"> ADVANCED </a>
-          </li>
-          <li class="course-level">
-            <a href="#" class="level"> FULL COURSE </a>
-          </li>
-        </ul>
-      </div>
+      <!-- Gallery section -->
+      <section class="gallery-section" id="gallery">
+        <div class="gallery-title-wrapper">
+          <h2>TRADES WE HAVE DONE</h2>
+        </div>
+        <div class="gallery-slider">
+          <button class="gallery-slider__btn gallery-slider__btn--left">
+            &larr;
+          </button>
+          <div class="gallery-slide-container">
+            <div class="gallery-slide">
+              <div class="gallery-image-container">
+                <img
+                  src="./images/backgrounds/trade image 1.jpg"
+                  alt="Trade Image 1"
+                />
+              </div>
+            </div>
+            <div class="gallery-slide">
+              <div class="gallery-image-container">
+                <img
+                  src="./images/backgrounds/trade image 2.jpg"
+                  alt="Trade Image 2"
+                />
+              </div>
+            </div>
+            <div class="gallery-slide">
+              <div class="gallery-image-container">
+                <img
+                  src="./images/backgrounds/trade image 3.jpg"
+                  alt="Trade Image 3"
+                />
+              </div>
+            </div>
+            <div class="gallery-slide">
+              <div class="gallery-image-container">
+                <img
+                  src="./images/backgrounds/trade image 4.jpg"
+                  alt="Trade Image 3"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="gallery-slider__btn gallery-slider__btn--right">
+            &rarr;
+          </button>
+        </div>
+        <div class="gallery-indicators"></div>
+      </section>
 
-      <!-- Course content | Videos -->
-      <div class="course-content-wrapper">
-        <div class="video-content-wrapper">
-          <!-- Individual course -->
-          <div class="course">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <!-- <iframe style="border-radius: 24px;" width="450" height="245"
+      <!-- Cousre section -->
+      <section class="course-section" id="courses">
+        <h1 class="course-section-title">OUR COURSES</h1>
+        <!-- COURSE OPTIONS -->
+        <div class="course-options">
+          <ul class="course-levels">
+            <li class="course-level">
+              <a href="#" class="level active"> BEGINNER </a>
+            </li>
+            <li class="course-level">
+              <a href="#" class="level"> INTERMEDIATE </a>
+            </li>
+            <li class="course-level">
+              <a href="#" class="level"> ADVANCED </a>
+            </li>
+            <li class="course-level">
+              <a href="#" class="level"> FULL COURSE </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Course content | Videos -->
+        <div class="course-content-wrapper">
+          <div class="video-content-wrapper">
+            <!-- Individual course -->
+            <div class="course">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <!-- <iframe style="border-radius: 24px;" width="450" height="245"
                         src="https://www.youtube.com/embed/IgjuxGqwOHU?si=AIVt22UqLKD4UXws" title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-            <!-- Course info. -->
-            <div class="course-info-wrapper">
-              <h2 class="video-title">A basic Introduction to Trading</h2>
-              <p class="course-description">
-                This course is catered towards beginners.
-              </p>
-              <p class="course-pricing"><span>$</span>200</p>
+              <!-- Course info. -->
+              <div class="course-info-wrapper">
+                <h2 class="video-title">A basic Introduction to Trading</h2>
+                <p class="course-description">
+                  This course is catered towards beginners.
+                </p>
+                <p class="course-pricing"><span>$</span>200</p>
+              </div>
             </div>
-          </div>
-          <!-- Individual course -->
-          <div class="course">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <!-- Course info. -->
-            <div class="course-info-wrapper">
-              <h2 class="video-title">A basic Introduction to Trading</h2>
-              <p class="course-description">
-                This course is catered towards beginners.
-              </p>
-              <p class="course-pricing"><span>$</span>200</p>
+            <!-- Individual course -->
+            <div class="course">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <!-- Course info. -->
+              <div class="course-info-wrapper">
+                <h2 class="video-title">A basic Introduction to Trading</h2>
+                <p class="course-description">
+                  This course is catered towards beginners.
+                </p>
+                <p class="course-pricing"><span>$</span>200</p>
+              </div>
             </div>
-          </div>
-          <!-- Individual course -->
-          <div class="course">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <!-- Course info. -->
-            <div class="course-info-wrapper">
-              <h2 class="video-title">A basic Introduction to Trading</h2>
-              <p class="course-description">
-                This course is catered towards beginners.
-              </p>
-              <p class="course-pricing"><span>$</span>200</p>
+            <!-- Individual course -->
+            <div class="course">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <!-- Course info. -->
+              <div class="course-info-wrapper">
+                <h2 class="video-title">A basic Introduction to Trading</h2>
+                <p class="course-description">
+                  This course is catered towards beginners.
+                </p>
+                <p class="course-pricing"><span>$</span>200</p>
+              </div>
             </div>
-          </div>
-          <!-- Individual course -->
-          <div class="course">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <!-- Course info. -->
-            <div class="course-info-wrapper">
-              <h2 class="video-title">A basic Introduction to Trading</h2>
-              <p class="course-description">
-                This course is catered towards beginners.
-              </p>
-              <p class="course-pricing"><span>$</span>200</p>
+            <!-- Individual course -->
+            <div class="course">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <!-- Course info. -->
+              <div class="course-info-wrapper">
+                <h2 class="video-title">A basic Introduction to Trading</h2>
+                <p class="course-description">
+                  This course is catered towards beginners.
+                </p>
+                <p class="course-pricing"><span>$</span>200</p>
+              </div>
             </div>
-          </div>
-          <!-- Individual course -->
-          <div class="course">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <!-- Course info. -->
-            <div class="course-info-wrapper">
-              <h2 class="video-title">A basic Introduction to Trading</h2>
-              <p class="course-description">
-                This course is catered towards beginners.
-              </p>
-              <p class="course-pricing"><span>$</span>200</p>
+            <!-- Individual course -->
+            <div class="course">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <!-- Course info. -->
+              <div class="course-info-wrapper">
+                <h2 class="video-title">A basic Introduction to Trading</h2>
+                <p class="course-description">
+                  This course is catered towards beginners.
+                </p>
+                <p class="course-pricing"><span>$</span>200</p>
+              </div>
             </div>
-          </div>
-          <!-- Individual course -->
-          <div class="course">
-            <video controls poster="./images/backgrounds/hero_bg.jpg">
-              <source src="https://vimeo.com/556339269" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <!-- Course info. -->
-            <div class="course-info-wrapper">
-              <h2 class="video-title">A basic Introduction to Trading</h2>
-              <p class="course-description">
-                This course is catered towards beginners.
-              </p>
-              <p class="course-pricing"><span>$</span>200</p>
+            <!-- Individual course -->
+            <div class="course">
+              <video controls poster="./images/backgrounds/hero_bg.jpg">
+                <source src="https://vimeo.com/556339269" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <!-- Course info. -->
+              <div class="course-info-wrapper">
+                <h2 class="video-title">A basic Introduction to Trading</h2>
+                <p class="course-description">
+                  This course is catered towards beginners.
+                </p>
+                <p class="course-pricing"><span>$</span>200</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Testimonial section -->
-    <section class="testimonials" id="testimonials">
-      <div class="testimonials-title-wrapper">
-        <h2>TESTIMONIALS</h2>
-        <h3><span>WHAT ARE THEY</span> SAYING ABOUT US</h3>
-      </div>
-      <div class="slider">
-        <div class="slide slide--1">
-          <div class="testimonial">
-            <h5 class="testimonial__header">Best financial decision ever!</h5>
-            <blockquote class="testimonial__text">
-              Discovering OptimalFX has been the ultimate game-changer in my
-              financial journey. OptimalFX isn't just a learning platform; it's
-              a gateway to mastering effective trading strategies that have
-              transformed the way I approach the financial markets.
-            </blockquote>
-            <address class="testimonial__author">
+      </section>
+      <!-- Testimonial section -->
+      <section class="testimonials" id="testimonials">
+        <div class="testimonials-title-wrapper">
+          <h2>TESTIMONIALS</h2>
+          <h3><span>WHAT ARE THEY</span> SAYING ABOUT US</h3>
+        </div>
+        <div class="slider">
+          <div class="slide slide--1">
+            <div class="testimonial">
+              <h5 class="testimonial__header">Best financial decision ever!</h5>
+              <blockquote class="testimonial__text">
+                Discovering OptimalFX has been the ultimate game-changer in my
+                financial journey. OptimalFX isn't just a learning platform;
+                it's a gateway to mastering effective trading strategies that
+                have transformed the way I approach the financial markets.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="../assets/images/backgrounds/mentor.jpg"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Onesmus Bob</h6>
+                <p class="testimonial__location">Lang'ata, Rd.</p>
+              </address>
+            </div>
+          </div>
+          <div class="slide slide--2 slide--active">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                The last step to becoming a complete minimalist
+              </h5>
+              <blockquote class="testimonial__text">
+                What sets Optimalfx apart is its holistic approach to
+                minimalism, addressing not only the external aspects of
+                decluttering but also the internal shifts necessary for lasting
+                change. From guided meditation sessions to insightful articles
+                on mindfulness, Optimalfx provides a wealth of resources to
+                support my journey towards minimalism in all its dimensions.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">John Kamau</h6>
+                <p class="testimonial__location">Nyeri, Kenya</p>
+              </address>
+            </div>
+          </div>
+          <div class="slide slide--3">
+            <div class="testimonial">
+              <h5 class="testimonial__header">
+                Finally free from old-school banks
+              </h5>
+              <blockquote class="testimonial__text">
+                For years, I felt shackled by the rigid structures and hidden
+                fees of traditional banks. Every transaction seemed burdened by
+                bureaucracy, and the idea of financial freedom felt like a
+                distant dream. However, discovering OptimalFx was a revelation—a
+                beacon of hope in a sea of outdated banking practices.
+              </blockquote>
+              <address class="testimonial__author">
+                <img
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                  alt=""
+                  class="testimonial__photo"
+                />
+                <h6 class="testimonial__name">Francisco Mkwange</h6>
+                <p class="testimonial__location">Mombasa, Kenya</p>
+              </address>
+            </div>
+          </div>
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+      </section>
+      <!-- EVENTS -->
+      <section class="events" id="events">
+        <h2 class="event-section-title">Events</h2>
+
+        <!-- Event content -->
+        <div class="event-content">
+          <div class="event-content-wrapper">
+            <!-- Individual course -->
+            <div class="event">
               <img
-                src="../assets/images/backgrounds/mentor.jpg"
-                alt=""
-                class="testimonial__photo"
+                src="./images/backgrounds/hero_bg.jpg"
+                alt="poster"
+                class="event-poster"
               />
-              <h6 class="testimonial__name">Onesmus Bob</h6>
-              <p class="testimonial__location">Lang'ata, Rd.</p>
-            </address>
-          </div>
-        </div>
-        <div class="slide slide--2 slide--active">
-          <div class="testimonial">
-            <h5 class="testimonial__header">
-              The last step to becoming a complete minimalist
-            </h5>
-            <blockquote class="testimonial__text">
-              What sets Optimalfx apart is its holistic approach to minimalism,
-              addressing not only the external aspects of decluttering but also
-              the internal shifts necessary for lasting change. From guided
-              meditation sessions to insightful articles on mindfulness,
-              Optimalfx provides a wealth of resources to support my journey
-              towards minimalism in all its dimensions.
-            </blockquote>
-            <address class="testimonial__author">
-              <img
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-                alt=""
-                class="testimonial__photo"
-              />
-              <h6 class="testimonial__name">John Kamau</h6>
-              <p class="testimonial__location">Nyeri, Kenya</p>
-            </address>
-          </div>
-        </div>
-        <div class="slide slide--3">
-          <div class="testimonial">
-            <h5 class="testimonial__header">
-              Finally free from old-school banks
-            </h5>
-            <blockquote class="testimonial__text">
-              For years, I felt shackled by the rigid structures and hidden fees
-              of traditional banks. Every transaction seemed burdened by
-              bureaucracy, and the idea of financial freedom felt like a distant
-              dream. However, discovering OptimalFx was a revelation—a beacon of
-              hope in a sea of outdated banking practices.
-            </blockquote>
-            <address class="testimonial__author">
-              <img
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-                alt=""
-                class="testimonial__photo"
-              />
-              <h6 class="testimonial__name">Francisco Mkwange</h6>
-              <p class="testimonial__location">Mombasa, Kenya</p>
-            </address>
-          </div>
-        </div>
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
-      </div>
-    </section>
-    <!-- EVENTS -->
-    <section class="events" id="events">
-      <h2 class="event-section-title">Events</h2>
-
-      <!-- Event content -->
-      <div class="event-content">
-        <div class="event-content-wrapper">
-          <!-- Individual course -->
-          <div class="event">
-            <img
-              src="./images/backgrounds/hero_bg.jpg"
-              alt="poster"
-              class="event-poster"
-            />
-            <!-- Course info. -->
-            <div class="event-info-wrapper">
-              <h2 class="event-title">Coming soon...</h2>
-              <p class="event-description">This event will be coming soon.</p>
-              <p class="event-pricing"><span>$</span>140</p>
+              <!-- Course info. -->
+              <div class="event-info-wrapper">
+                <h2 class="event-title">Coming soon...</h2>
+                <p class="event-description">This event will be coming soon.</p>
+                <p class="event-pricing"><span>$</span>140</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <h1 class="heading">CONTACT US</h1>
-      <p class="contact-sub-heading">
-        get <span>in touch</span> with <strong>optimalfx</strong>
-      </p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Name..." />
-          <input type="email" placeholder="Email..." />
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Subject..." />
-        </div>
-        <textarea
-          name=""
-          placeholder="Message..."
-          id=""
-          cols="30"
-          rows="10"
-        ></textarea>
-        <input type="submit" value="Send Message" class="contact-btn" />
-      </form>
-    </section>
-
-    <!-- Copy Trading -->
-    <section class="copy-trading-section">
-      <div class="container">
-        <div class="copy-trading-content">
-          <h2>Copy Trading</h2>
-          <p>
-            Maximize your trading potential by copying the strategies of
-            successful OptimalFX traders at <span>BDSWISS</span>. Gain access to
-            a global network of experienced traders and potentially earn profits
-            as they do.
-          </p>
-          <div class="copy-trading-info">
-            <ol class="copy-trading-instructions">
-              <li>Click the link to create your BDSWISS account.</li>
-              <li>Ensure you select MT4 with Default Leverage.</li>
-              <li>Verify the account with your ID and KRA PIN certificate.</li>
-              <li>Fund your account and click "copy trading".</li>
-              <li>
-                Start copy trading and enjoy profits with
-                <span>OptimalFX.</span>
-              </li>
-              <li>
-                In case you get stuck, contact admin via
-                email/Call/WhatsApp/Text <br />
-                +254 754 472 278.
-              </li>
-            </ol>
-            <img
-              src="./images/backgrounds/copy trading.jpg"
-              alt="BDSWISS Copy Trading Platform"
-            />
+      </section>
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <h1 class="heading">CONTACT US</h1>
+        <p class="contact-sub-heading">
+          get <span>in touch</span> with <strong>optimalfx</strong>
+        </p>
+        <form action="#">
+          <div class="input-box">
+            <input type="text" placeholder="Name..." />
+            <input type="email" placeholder="Email..." />
           </div>
-          <a href="#" class="btn btn--primary">Join BDSWISS Copy Trading</a>
-        </div>
-      </div>
-    </section>
+          <div class="input-box">
+            <input type="text" placeholder="Subject..." />
+          </div>
+          <textarea
+            name=""
+            placeholder="Message..."
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Send Message" class="contact-btn" />
+        </form>
+      </section>
 
-    <!-- FOOTER -->
-    <section class="footer">
-      <div class="footer-content-wrapper">
-        <div class="box">
-          <h3><i class="fas fa-map-marker-alt"></i>ADDRESS</h3>
-          <p class="box-info">
-            A298 Forex street
-            <br />
-            cash city, cc-254
-          </p>
+      <!-- Copy Trading -->
+      <section class="copy-trading-section">
+        <div class="container">
+          <div class="copy-trading-content">
+            <h2>Copy Trading</h2>
+            <p>
+              Maximize your trading potential by copying the strategies of
+              successful OptimalFX traders at <span>BDSWISS</span>. Gain access
+              to a global network of experienced traders and potentially earn
+              profits as they do.
+            </p>
+            <div class="copy-trading-info">
+              <ol class="copy-trading-instructions">
+                <li>Click the link to create your BDSWISS account.</li>
+                <li>Ensure you select MT4 with Default Leverage.</li>
+                <li>
+                  Verify the account with your ID and KRA PIN certificate.
+                </li>
+                <li>Fund your account and click "copy trading".</li>
+                <li>
+                  Start copy trading and enjoy profits with
+                  <span>OptimalFX.</span>
+                </li>
+                <li>
+                  In case you get stuck, contact admin via
+                  email/Call/WhatsApp/Text <br />
+                  +254 754 472 278.
+                </li>
+              </ol>
+              <img
+                src="./images/backgrounds/copy trading.jpg"
+                alt="BDSWISS Copy Trading Platform"
+              />
+            </div>
+            <a href="#" class="btn btn--primary">Join BDSWISS Copy Trading</a>
+          </div>
         </div>
-        <div class="box">
-          <h3><i class="fas fa-clock"></i>SCHEDULE</h3>
-          <p class="box-info">
-            Mon-Sat: 11am-23pm
-            <br />
-            Sunday: closed
-          </p>
+      </section>
 
-          <!-- Copy Trading url -->
-          <!-- <a class="copy-trading-url" href="#" title="Copy Trading">
+      <!-- FOOTER -->
+      <section class="footer">
+        <div class="footer-content-wrapper">
+          <div class="box">
+            <h3><i class="fas fa-map-marker-alt"></i>ADDRESS</h3>
+            <p class="box-info">
+              A298 Forex street
+              <br />
+              cash city, cc-254
+            </p>
+          </div>
+          <div class="box">
+            <h3><i class="fas fa-clock"></i>SCHEDULE</h3>
+            <p class="box-info">
+              Mon-Sat: 11am-23pm
+              <br />
+              Sunday: closed
+            </p>
+
+            <!-- Copy Trading url -->
+            <!-- <a class="copy-trading-url" href="#" title="Copy Trading">
             <ion-icon name="information-circle"></ion-icon>
             <span>http://nicholasgithinji/cp/forex/?</span>
           </a> -->
+          </div>
+          <div class="box">
+            <h3><i class="fas fa-phone-alt"></i>REACH US</h3>
+            <p class="box-info">
+              phone: +0721-xxx-283
+              <br />
+              Email: admin@optimalfx.co
+            </p>
+          </div>
+          <div class="box">
+            <h3>FOLLOW US</h3>
+            <ion-icon name="logo-instagram" class="social-icon"
+              ><a href=""></a
+            ></ion-icon>
+            <ion-icon name="logo-facebook" class="social-icon"
+              ><a href=""></a
+            ></ion-icon>
+            <ion-icon name="logo-youtube" class="social-icon"
+              ><a href=""></a
+            ></ion-icon>
+            <ion-icon name="logo-tiktok" class="social-icon"
+              ><a href=""></a
+            ></ion-icon>
+          </div>
         </div>
-        <div class="box">
-          <h3><i class="fas fa-phone-alt"></i>REACH US</h3>
-          <p class="box-info">
-            phone: +0721-xxx-283
-            <br />
-            Email: admin@optimalfx.co
-          </p>
+        <!-- Credit section -->
+        <div class="credit">
+          &copy; copyright <span>OPTIMALFX</span>. all rights reserved
         </div>
-        <div class="box">
-          <h3>FOLLOW US</h3>
-          <ion-icon name="logo-instagram" class="social-icon"
-            ><a href=""></a
-          ></ion-icon>
-          <ion-icon name="logo-facebook" class="social-icon"
-            ><a href=""></a
-          ></ion-icon>
-          <ion-icon name="logo-youtube" class="social-icon"
-            ><a href=""></a
-          ></ion-icon>
-          <ion-icon name="logo-tiktok" class="social-icon"
-            ><a href=""></a
-          ></ion-icon>
-        </div>
-      </div>
-      <!-- Credit section -->
-      <div class="credit">
-        &copy; copyright <span>OPTIMALFX</span>. all rights reserved
-      </div>
-    </section>
+      </section>
 
-    <!--===========-->
-    <!-- Custom JS -->
-    <!--===========-->
-    <script src="./static/js/testimonials.js"></script>
-    <script src="./static/js/main.js"></script>
-    <script src="./static/js/client.js"></script>
+      <!--===========-->
+      <!-- Custom JS -->
+      <!--===========-->
+      <script src="./static/js/testimonials.js"></script>
+      <script src="./static/js/main.js"></script>
+      <script src="./static/js/client.js"></script>
 
-    <!--======================-->
-    <!-- Third party packages -->
-    <!--======================-->
-    <!-- ionicons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </div>
+      <!--======================-->
+      <!-- Third party packages -->
+      <!--======================-->
+      <!-- ionicons -->
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+    </div>
   </body>
 </html>
