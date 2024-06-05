@@ -91,6 +91,10 @@
 }
 
 @media (max-width: 540px) {
+    #enroll-navigation {
+        visibility: hidden;
+    }
+
     .hero {
         background-position: center;
         background-repeat: no-repeat;
