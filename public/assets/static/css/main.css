@@ -483,7 +483,7 @@
 /* Gallery Section Styling */
 .gallery-section {
   padding: 4rem 0;
-  background: #fafafe;
+  background: #fff;
   text-align: center;
   position: relative;
 }
@@ -492,7 +492,7 @@
   color: var(--blue);
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 1;
 }
@@ -507,6 +507,7 @@
 .gallery-slide-container {
   display: flex;
   animation: scroll 20s linear infinite;
+  will-change: transform;
 }
 
 @keyframes scroll {
@@ -612,6 +613,16 @@
     width: 80%;
   }
 }
+
+/* CSS for the Horizontal Line */
+.horizontal-line {
+  border: none;
+  height: 2px; 
+  background-color: var(--chartreuse); 
+  margin: 20px auto; 
+  width: 80%; 
+}
+
 
 /* Course section styling */
 .course-section {
