@@ -1,3 +1,21 @@
+// Ensure the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+  // Function to hide the preloader
+  function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      preloader.style.transition = 'opacity .6s ease-out';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 600); // Wait for the opacity transition to finish before hiding
+    }
+  }
+
+  // Add event listener for page load
+  window.addEventListener('load', hidePreloader);
+});
+
 // Debugging
 const LOG = console.log;
 

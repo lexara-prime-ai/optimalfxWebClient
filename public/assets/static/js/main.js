@@ -1,3 +1,24 @@
+// Ensure the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+  // Function to hide the preloader
+  function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      preloader.style.transition = 'opacity 0.6s ease-out';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        mainContent.style.display = 'block';
+      }, 600); // Wait for the opacity transition to finish before hiding
+    }
+  }
+
+  // Add event listener for page load
+  window.addEventListener('load', hidePreloader);
+});
+
+
 // Slider
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
@@ -37,13 +58,13 @@ const slider = function () {
 
   // Next slide
   const nextSlide = function () {
-    curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
+    curSlide = curSlide === maxSlide - 1 ? 0 : curSlide + 1;
     goToSlide(curSlide);
     activateDot(curSlide);
   };
 
   const prevSlide = function () {
-    curSlide = (curSlide === 0) ? maxSlide - 1 : curSlide - 1;
+    curSlide = curSlide === 0 ? maxSlide - 1 : curSlide - 1;
     goToSlide(curSlide);
     activateDot(curSlide);
   };
@@ -99,9 +120,14 @@ const gallerySlider = function () {
   const btnLeft = document.querySelector(".gallery-slider__btn--left");
   const btnRight = document.querySelector(".gallery-slider__btn--right");
   const indicatorContainer = document.querySelector(".gallery-indicators");
+  const sliderContainer = document.querySelector(".gallery-slide-container");
 
   let curSlide = 0;
   const maxSlide = slides.length;
+
+  // Variables for touch event handling
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   // Function to go to a specific slide
   const goToSlide = function (slide) {
@@ -124,23 +150,24 @@ const gallerySlider = function () {
 
   // Function to activate the correct indicator
   const activateIndicator = function (slide) {
-    document.querySelectorAll(".gallery-indicator").forEach(indicator => {
+    document.querySelectorAll(".gallery-indicator").forEach((indicator) => {
       indicator.classList.remove("active");
     });
-    document.querySelector(`.gallery-indicator[data-slide="${slide}"]`).classList.add("active");
+    document
+      .querySelector(`.gallery-indicator[data-slide="${slide}"]`)
+      .classList.add("active");
   };
 
   // Function to move to the next slide
   const nextSlide = function () {
-    curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
+    curSlide = curSlide === maxSlide - 1 ? 0 : curSlide + 1;
     goToSlide(curSlide);
     activateIndicator(curSlide);
-    console.log(curSlide);
   };
 
   // Function to move to the previous slide
   const prevSlide = function () {
-    curSlide = (curSlide === 0) ? maxSlide - 1 : curSlide - 1;
+    curSlide = curSlide === 0 ? maxSlide - 1 : curSlide - 1;
     goToSlide(curSlide);
     activateIndicator(curSlide);
   };
@@ -148,6 +175,32 @@ const gallerySlider = function () {
   // Function to automatically slide through the images
   const autoSlide = function () {
     setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  };
+
+  const handleTouchStart = function (e) {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = function () {
+    if (touchStartX - touchEndX > 50) {
+      nextSlide(); // swipe left
+    } else if (touchEndX - touchStartX > 50) {
+      prevSlide(); // swipe right
+    }
+  };
+
+  const handleTouchMove = function (e) {
+    touchEndX = e.touches[0].clientX;
+  };
+
+  // Function to stop the sliding animation
+  const stopSlide = () => {
+    sliderContainer.style.animationPlayState = "paused";
+  };
+
+  // Function to start the sliding animation
+  const startSlide = () => {
+    sliderContainer.style.animationPlayState = "running";
   };
 
   // Initialize the slider
@@ -172,11 +225,22 @@ const gallerySlider = function () {
       activateIndicator(curSlide);
     }
   });
+
+  // Event listeners for touch events
+  sliderContainer.addEventListener("touchstart", handleTouchStart);
+  sliderContainer.addEventListener("touchmove", handleTouchMove);
+  sliderContainer.addEventListener("touchend", handleTouchEnd);
+
+  // Event listeners for mouseover and mouseout
+  sliderContainer.addEventListener("mouseover", stopSlide);
+  sliderContainer.addEventListener("mouseout", startSlide);
+
+  // Event listeners for touchstart and touchend
+  sliderContainer.addEventListener("touchstart", stopSlide);
+  sliderContainer.addEventListener("touchend", startSlide);
 };
 
 gallerySlider();
-
-
 
 // Check whether user has an [ACTIVE] session
 // window.addEventListener("load", () => {
