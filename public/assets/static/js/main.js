@@ -159,14 +159,14 @@ const gallerySlider = function () {
 
   // Function to move to the next slide
   const nextSlide = function () {
-    curSlide = (curSlide + 1) % maxSlide;
+    curSlide = curSlide === maxSlide - 1 ? 0 : curSlide + 1;
     goToSlide(curSlide);
     activateIndicator(curSlide);
   };
 
   // Function to move to the previous slide
   const prevSlide = function () {
-    curSlide = (curSlide - 1 + maxSlide) % maxSlide;
+    curSlide = curSlide === maxSlide - 1 ? 0 : curSlide - 1;
     goToSlide(curSlide);
     activateIndicator(curSlide);
   };
