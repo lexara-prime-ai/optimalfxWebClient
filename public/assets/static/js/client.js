@@ -38,9 +38,6 @@ const ENDPOINTS = Object.freeze({
   GET_COURSES: "http://localhost:5000/api/Course",
 });
 
-// [REDIRECT]
-//   window.location.href = 'http://localhost:5500/web_client/public/assets/pages/login.html';
-
 // CUSTOM [ERROR] HANDLER
 // [ERROR] handling
 class ErrorHandling {
