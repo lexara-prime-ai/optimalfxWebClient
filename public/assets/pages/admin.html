@@ -536,7 +536,25 @@
 
                     loadUsers();
                 } else {
-                    alert('Failed to add user');
+                    Toastify({
+                        text: "Failed to add user",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                 }
             } catch (error) {
                 console.error('Error:', error);
@@ -557,10 +575,46 @@
                     body: JSON.stringify({ title, description, url, author })
                 });
                 if (response.ok) {
-                    alert('Course added successfully');
+                    Toastify({
+                        text: "Course added successfully",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                     loadCourses();
                 } else {
-                    alert('Failed to add course');
+                    Toastify({
+                        text: "Failed to add course",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                 }
             } catch (error) {
                 console.error('Error:', error);
@@ -618,10 +672,46 @@
                     method: 'DELETE'
                 });
                 if (response.ok) {
-                    alert('User deleted successfully');
+                    Toastify({
+                        text: "User deleted successfully",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                     loadUsers();
                 } else {
-                    alert('Failed to delete user');
+                    Toastify({
+                        text: "Failed to delete user",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                 }
             } catch (error) {
                 console.error('Error:', error);
@@ -634,10 +724,46 @@
                     method: 'DELETE'
                 });
                 if (response.ok) {
-                    alert('Course deleted successfully');
+                    Toastify({
+                        text: "Course deleted successfully",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                     loadCourses();
                 } else {
-                    alert('Failed to delete course');
+                    Toastify({
+                        text: "Failed to delete course",
+                        duration: 3000,
+                        newWindow: true,
+                        close: false,
+                        gravity: "top",
+                        position: "left",
+                        stopOnFocus: true,
+                        style: {
+                            background: "#144681",
+                            color: "#ffffff",
+                            borderRadius: "9px",
+                            fontWeight: "700",
+                            letterSpacing: "1px",
+                            textTransform: "capitalize",
+                        },
+                        // Handle callback after click.
+                        onClick: function () { },
+                    }).showToast();
                 }
             } catch (error) {
                 console.error('Error:', error);
