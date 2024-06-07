@@ -37,6 +37,8 @@
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
         width: 75%;
+        height: 98px;
+        padding-right: 4rem;
     }
 
     .tradingview-slider {
@@ -96,6 +98,10 @@
 }
 
 @media (max-width: 540px) {
+    #log-out {
+        display: none;
+    }
+
     #enroll-navigation {
         visibility: hidden;
     }
@@ -116,6 +122,8 @@
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
         width: 90%;
+        height: 110px;
+        padding-right: 4rem;
     }
 
     .tradingview-slider {
@@ -230,6 +238,8 @@
 
     .hero .hero-content-wrapper .hero-text-content-wrapper .hero-text {
         width: 100%;
+        height: 130px;
+        padding-right: 4rem;
         background: var(--blue);
         color: var(--white);
     }

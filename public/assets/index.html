@@ -84,16 +84,21 @@
         <button class="cta-hero" id="enroll-navigation">
           <a href="./pages/register.html"> ENROLL </a>
         </button>
+
+        <button class="cta-hero" id="log-out" onclick="App.logOut()">
+          <a href="./pages/login.html"> LOGOUT </a>
+        </button>
       </nav>
 
       <!-- SIDE MENU -->
       <div id="side-menu" class="side-nav">
-        <a class="btn-close" onclick="closeSideMenu()"> &times; </a>
+        <button class="btn-close" onclick="closeSideMenu()"> &times; </button>
         <a href="#" class="active-link-mobile">Home</a>
         <a href="#about-us">About</a>
         <a href="#courses">Courses</a>
         <a href="#events">Events</a>
         <a href="#contact">Contact</a>
+        <a href="./pages/login.html" onclick="App.logOut(this)">Logout</a>
       </div>
 
       <!-- Hero section -->

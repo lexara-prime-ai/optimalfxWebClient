@@ -9,6 +9,7 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const registrationButton = document.querySelector("#registration-form-btn");
 const loginButton = document.querySelector("#login-form-btn");
+const logoutButton = document.querySelector("#log-out");
 const proceedButton = document.querySelector("#proceed-form-btn");
 
 // -> Enroll & View Courses buttons
@@ -83,6 +84,10 @@ class App {
       enrollButton.classList.add("visible");
       enrollButtonNavigation.classList.add("visible");
     }
+  }
+
+  static logOut() {
+    localStorage.clear();
   }
 }
 
