@@ -85,7 +85,7 @@
   justify-content: space-between;
   padding: 0rem 6%;
   background: var(--white-alt);
-  box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, 0.2);
   top: 0;
   left: 0;
   width: 100%;
